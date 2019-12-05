@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "PhosphateInline";
+  src: url("../css/PhosphateInline.woff"),
+       url("../css/PhosphateInline.woff2");
+  font-family: "Andale Mono";
+  src: url("../css/AndaleMono.woff");
+}
+
+#m-img{
+  width: 100vw;
+  background-color: #161616;
+  padding-bottom: 5vh;
+  
+  .navi
+  {
+  //  top: 0px;
+  padding: 0;
+  margin:0;
+  display: flex;
+  flex-direction: row;
+  
+  #logo{width: 12vw;}
+  }
+  
+  
+  
+  .m-text
+  {
+
+  font-family: "PhosphateInline";
+  font-size: 11rem;
+  padding-top: 40px;
+  text-align: center;
+  color:#B4B1B1;
+  
+  letter-spacing: 3px;
+  
+   & > span {
+  animation: glow 3s ease-in-out infinite;
+   
+  }
+  
+  @keyframes glow {
+      10% ,90% {
+        color: #FFF;
+        text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #B4B1B1, 0 0 30px #B4B1B1, 0 0 40px #B4B1B1, 0 0 55px #B4B1B1, 0 0 75px #B4B1B1, 2px 2px 2px rgba(142,139,116,0), 2px 2px 2px;
+      }
+      
+      0%, 100% {
+        color: #111;
+        text-shadow: none;
+      }
+    }
+  
+  }
+  }

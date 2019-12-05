@@ -1,0 +1,132 @@
+@import 'modules/_nav';
+
+@font-face {
+    font-family: "PhosphateInline";
+    src: url("../css/PhosphateInline.woff"),
+         url("../css/PhosphateInline.woff2");
+    
+}
+
+main{
+width: 100vw;
+padding:0;
+margin:0;
+}
+
+
+
+#about{
+width: 100vw;
+height: 73vh;
+display: flex;
+flex-direction: row;
+
+.black-about{
+width: 50vw;
+background-color: #161616;
+
+h2{font-size: 3rem; color: white; text-align:left}
+
+.img-con{
+    height: 235px;
+    transform: rotate(-45deg);
+    // vertical-align: middle;
+    width:235px;
+    top: 7vh;
+    left: 15vw;
+    position: relative;
+    background-image: url(../images/pro.png);
+    background-attachment: fixed;
+    justify-content: center;
+}
+
+
+}
+
+#about-dynamic{
+    width: 50vw;
+background-color: white;
+
+
+//dynamic h2 h3 do styling !!!!!!!!!!!!!!!!!!!
+
+}
+
+}
+
+//do portfolio
+
+#work{
+    width: 100vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: row;
+
+    
+
+    .white-g
+    {width: 50vw;
+    height: 85vh;
+    background-color: white;}
+    
+    #img-here{
+      width: 450px;
+      height: 330px;
+      background-color: #B4B1B1;
+      position: absolute;
+      z-index: 1;
+      top: 155vh;
+      left: 25vw;
+      margin:0 auto;
+      overflow:hidden;
+    
+    .img-cont{
+        position:relative; width:1800px; transition: all .5s;
+    
+        img{width: 450px; float:left;}
+    }
+    
+    }
+  
+    
+
+    .black-g
+    {
+    width: 50vw;
+    height: 85vh;
+    position: relative;
+    right: 0;
+    background-color: black;
+    
+    .workData{
+    color:white;
+    display:flex;
+    flex-direction: column;
+    font-size: 2rem;
+    margin-left: 250px;
+    padding: 50px;}
+    }
+}
+
+.popover { 
+    display: none;
+    position: absolute;
+    background-color: #161616;
+    width:100vw;
+    height: 100vh;
+    top: 100vh;
+    z-index: 1;
+    border-radius: 8px;
+    padding: 4px;
+
+
+    h2,h3,p{
+    padding: 2%;
+    font-size: 1.5rem;
+    }
+  }
+ 
+  .show-popover { 
+     display: block;
+       text-align: center;}
+

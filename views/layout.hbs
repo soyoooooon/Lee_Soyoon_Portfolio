@@ -1,10 +1,62 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>{{title}}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    {{{body}}}
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/ico" href="images/logo.ico">
+    <title>Lee, Soyoon</title>
+</head>
+<body>
+  <main>
+<section id="m-img">
+<nav class="navi">
+  <img src="images/logo.svg" id="logo" alt="logo">
+  </nav>
+  <h1 class="m-text">
+  <span>H</span><span>E</span><span>L</span><span>L</span><span>O</span><br>
+  <span>W</span><span>O</span><span>R</span><span>L</span><span>D</span></h1>
+</section>
+<!-- hook image-->
+<section id="about">
+<div class="black-about">
+<h2>ABOUT</h2>
+<div class="img-con"></div></div>
+<div id="about-dynamic">
+{{{ body }}}</div>
+</section>
+<!---about-->
+<section id="work">
+<div class="white-g"></div>
+<div id="img-here">
+  <div class="img-cont" style="right: 0;">
+ <img src="images/music-mockup.png">
+ <img src="images/float-mockup.png">
+ <img src="images/team-mockup.png">
+ <img src="images/banana-mockup.png">
+ </div>
+</div>
+<div class="black-g">
+  <span class="workData" data-target="1" data-offset="0">Music Mixer</span>
+  <span class="workData" data-target="2" data-offset="1">float:LEFT</span>
+  <span class="workData" data-target="3" data-offset="2">Team Page</span>
+  <span class="workData" data-target="4" data-offset="3">Banana Slicer</span>
+</div>
+</section>
+<article class="popover">
+            <!-- ㅇㅣ미지 -->
+            <button class="close-btn">X</button>
+            <h2 class="name"></h2>
+            <h3 class="tool"></h3>
+            <h3 class="team"></h3>
+            <p class="text"></p>
+            <h4 class="link"></h4>
+        </article>
+  <!-- work -->
+  <section class="movie"></section>
+</main>
+<script src="js/main.js"></script>
+</body>
 </html>
