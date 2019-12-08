@@ -1,9 +1,9 @@
 const config = {
-    host: 'localhost',
-    user: 'root',
-    password: 'root',
-    database: 'db_soyoon',
-    port: 8889
+    host: 'us-cdbr-iron-east-05.cleardb.net',
+    user: 'bfe17091fe4b6a',
+    password: 'b76deb76',
+    database: 'heroku_bcb5f5ad54eb156'
+   
    }
    
    module.exports = config;
