@@ -11,6 +11,7 @@ let burger = document.querySelector('.burger');
 let conTact = document.querySelector('#form');
 let contBtn = document.querySelector('.nav-cont');
 let myFace = document.querySelector('.myFace');
+// let marQuee = document.querySelector('.infinite')
 
 function imgChange(){
     let offset = 450,
@@ -95,7 +96,6 @@ function intoContact(){
   conTact.classList.toggle('show-cont');
   //debugger;
 };
-
 
 
 myData.forEach(button => button.addEventListener("click", imgChange));

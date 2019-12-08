@@ -1,10 +1,23 @@
 @import 'modules/_nav';
+@import 'modules/foot';
 
 @font-face {
     font-family: "PhosphateInline";
     src: url("../css/PhosphateInline.woff"),
          url("../css/PhosphateInline.woff2");
     
+}
+
+@font-face{
+    font-family: "Andale Mono";
+    src: url("../css/AndaleMono.woff");
+
+  }
+
+@font-face {
+ font-family: 'Share Tech Mono', monospace;
+ src: url("../css/ShareTechMono-Regular.woff"),
+      url("../css/ShareTechMono-Regular.woff");
 }
 
 main{
@@ -26,7 +39,12 @@ flex-direction: row;
 width: 50vw;
 background-color: #161616;
 
-h2{font-size: 3rem; color: white; text-align:left}
+h2{font-family: "Andale Mono";
+    padding-top: 3vh;
+    padding-left: 2vw;
+    font-size: 3rem; color: white; text-align:left}
+
+
 
 .img-con{
     height: 235px;
@@ -39,8 +57,18 @@ h2{font-size: 3rem; color: white; text-align:left}
     background-image: url(../images/pro.png);
     background-attachment: fixed;
     justify-content: center;
+    z-index: 1;
 }
 
+marquee{
+    width: 30vw; height: 30vh;
+    color: rgba(214,211,211,0.6);
+    top: -5vh;
+    left: 0vw;
+    font-size: 2rem;
+    position: relative;
+}
+      
 
 }
 
@@ -50,21 +78,49 @@ background-color: white;
 padding: 3%;
 
 h1{
+font-family: 'PhosphateInline';
 text-align: center;
-font-size: 1.5rem;
-letter-spacing: 1vw;
+font-size: 1.7rem;
+letter-spacing: 0.8vw;
 font-weight: 400;
 margin-bottom: 3vh;
  span{
 font-size: 4rem;
 }
 }
-h2,h3{font-size:1.2rem; letter-spacing: 3px; text-align: center; padding: 1.5%;}
-p{padding: 1%; font-size: 1rem; letter-spacing: 2px; text-align: center;}
+h2,h3{
+    font-family: 'Share Tech Mono', monospace;
+    font-size:1.2rem; letter-spacing: 2px; text-align: center; padding: 1.5%;}
+    p{font-family: 'Share Tech Mono', monospace;
+    padding: 1%; font-size: 1rem; letter-spacing: 1.5px; text-align: center;}
 
 //dynamic h2 h3 do styling !!!!!!!!!!!!!!!!!!!
 
 }
+.skill{
+width: 50vw;
+height: 200px;
+display:flex;
+flex-direction: row;
+
+
+
+img{width: 25vw; height: 20vh; margin: 5%;}
+
+.etc{
+width: 50vw;
+margin: 3%;
+text-align: center;
+    li{ font-family: 'Share Tech Mono', monospace;
+        font-size: 1rem; margin: 3%;
+        color: #515151;
+    
+    
+        span{font-size: 1.2rem; font-weight: 500; letter-spacing: 5px; color: black;}}
+}
+
+}
+
 
 }
 
@@ -75,7 +131,7 @@ p{padding: 1%; font-size: 1rem; letter-spacing: 2px; text-align: center;}
     height: 100vh;
     display: flex;
     overflow-x:hidden;
-    background-color: whitesmoke;
+    background-color:#f2f2f2;
     flex-direction: row;
 
     
@@ -136,15 +192,20 @@ p{padding: 1%; font-size: 1rem; letter-spacing: 2px; text-align: center;}
     width: 100vw;
     height: 100vh;
     background-color:white;
+    margin-bottom: 5vh;
+
+  video{ width: 90vw; margin: 5%;}
+
 }
-//video here...........
+
 
 
 .popover { 
     display: none;
     position: absolute;
     background-color:rgba(71,70,70,0.8);
-    width:100vw;
+    width:95vw;
+    left: 3vw;
     height: 100vh;
     top: 200vh;
     z-index: 1;
@@ -152,13 +213,21 @@ p{padding: 1%; font-size: 1rem; letter-spacing: 2px; text-align: center;}
     padding: 4px;
 
 
-    h2 {font-size: 2.5rem; font-weight: 300; color: seashell; margin-bottom: 10px;}
+    h2 {font-size: 2.5rem; font-weight: 300; 
+        font-family: 'Share Tech Mono', monospace;
+        color: seashell; margin-bottom: 10px;}
     
     h3,p{
     padding: 2%;
+    font-family: 'Share Tech Mono', monospace;
     font-size: 1.5rem;
     color: seashell;
     }
+
+    .close-btn{ background: none;
+                margin-left: 90vw;
+                border:none; font-size:50px;
+                font-family: 'Share Tech Mono', monospace; }
 
     .workImg img { width: 250px; height: 150px;}
 

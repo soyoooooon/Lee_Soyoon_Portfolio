@@ -1,10 +1,13 @@
 @font-face {
   font-family: "PhosphateInline";
   src: url("../css/PhosphateInline.woff"),
-       url("../css/PhosphateInline.woff2");
-  font-family: "Andale Mono";
-  src: url("../css/AndaleMono.woff");
-}
+       url("../css/PhosphateInline.woff2");}
+  
+  @font-face{
+    font-family: "Andale Mono";
+    src: url("../css/AndaleMono.woff");
+
+  }
 
 #m-img{
   width: 100vw;
@@ -106,12 +109,16 @@
   position: fixed;
   left: 74vw;
   width:20vw;
-  height: 40vh;
+  height: 50vh;
   z-index: 99;
-  background-color: rgba(255,245,238 ,0.9 );}
+  background-color: rgba(255,255,255 ,0.7);}
 
   ul {
+    font-family: "PhosphateInline";
     display: flex;
+    color: #161616;
+    font-size: 1.7rem;
+    margin-top: 2vh;
     flex-direction: column;
    li a {
     display: block;
