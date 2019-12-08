@@ -2,34 +2,49 @@ var express = require('express');
 var router = express.Router();
 var path = require('path');
 
-const sql = require('../utils/sql');
+const connect = require('../utils/sql');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', (req, res) => {
 
-  let query = "SELECT ID,job,feature,extra FROM tbl_bio";
+  // get the connection via the connection pool, and then run the query -> just one added step
+  connect.getConnection((err, connection) => {
+  if (err) { return console.log(error.message); }
 
+  let query = `SELECT ID,job,feature,extra FROM tbl_bio`;
 
-  sql.query(query, (err, result) => {
-    if (err) { throw err; console.log(err); }
+  connect.query(query, (err, result) => {
+    connection.release(); // send this connection back to the pool 
 
-    res.render('index', { bio: result });
+    if (err) {
+      
+      return console.log(err.message);
+    }
 
-  })
+    // console.log(result); 
+
+    // render our page
+    res.render('index', {bio: result}); 
+  });
 });
+})
 
 router.get('/info/:target', (req, res) => {
+  
+  connect.getConnection((err, connection) => {
+    if (err) { return console.log(error.message); }
 
   let query = `SELECT * FROM portfolio WHERE id="${req.params.target}"`;
 
-  sql.query(query, (err, result) => {
+  connect.query(query, (err, result) => {
+    connection.release();
     if (err) { console.log(err); }
 
     console.log(result);
     
     res.json(result[0]);
   })
-  
+});
 });
 
 module.exports = router;
