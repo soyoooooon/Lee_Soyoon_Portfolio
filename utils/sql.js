@@ -5,8 +5,9 @@ const connect = sql.createConnection ({
     host: config.host,
     password: config.password,
     user: config.user,
-    port: config.port,
+    // port: config.port,
     database: config.database
 })
+
 
 module.exports = connect;
