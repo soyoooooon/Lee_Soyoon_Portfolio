@@ -5,12 +5,6 @@ const postcss = require("gulp-postcss");
 const nano = require("cssnano");
 
 
-// include out image min library
-
-
-// define some common tasks for Gulp to run
-
-// like compile and minify SASS files:
 function compile(done) {
     gulp.src("sass/*.scss")
     .pipe(sass())

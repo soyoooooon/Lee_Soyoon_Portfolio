@@ -1,4 +1,4 @@
-const sql = require('mysql');
+const sql = require('sql');
 const config = require('../config');
 
 const connect = sql.createPool({
