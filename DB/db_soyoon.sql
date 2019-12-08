@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Dec 05, 2019 at 06:59 PM
+-- Generation Time: Dec 08, 2019 at 08:47 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.3.8
 
@@ -32,6 +32,7 @@ CREATE TABLE `portfolio` (
   `tool` text NOT NULL,
   `team` text NOT NULL,
   `text` text NOT NULL,
+  `image` text NOT NULL,
   `link` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -39,11 +40,11 @@ CREATE TABLE `portfolio` (
 -- Dumping data for table `portfolio`
 --
 
-INSERT INTO `portfolio` (`id`, `name`, `tool`, `team`, `text`, `link`) VALUES
-(1, 'Music Mixer', 'HTML & CSS & Java Script', 'Design - Daffodil Ho', 'Let’s have fun with music cans!', 'https://github.com/daffodilho/Lee_Ho_MusicMixer'),
-(2, 'float:LEFT', 'HTML & SASS ', 'Design - Daffodil Ho, Sujin Lee \r\nJavascript - Jeffrey Helder', 'Here’s powerful web studio \"float:LEFT\" in Fanshawe', 'https://github.com/soyoooooon/BootCamp'),
-(3, 'TEAM PAGE', 'HTML & CSS & Java Script', 'Design - Yufeng Lin', ' This is how being a team', 'https://github.com/soyoooooon/Lee_S-Lin_teampage'),
-(4, 'Banana Slicer', 'HTML & SASS & Node.js', 'Design - myself', 'Just look at this amazin Banna Slicer :p', 'https://github.com/soyoooooon/Lee_Soyoon_HeroukuTest');
+INSERT INTO `portfolio` (`id`, `name`, `tool`, `team`, `text`, `image`, `link`) VALUES
+(1, 'Music Mixer', 'HTML & CSS & Java Script', 'Design - Daffodil Ho', 'Let’s have fun with music cans!', 'music-mockup.png', 'https://github.com/daffodilho/Lee_Ho_MusicMixer'),
+(2, 'float:LEFT', 'HTML & SASS ', 'Design - Daffodil Ho, Sujin Lee \r\nJavascript - Jeffrey Helder', 'Here’s a powerful web studio \"float:LEFT\" in Fanshawe', 'float-mockup.png', 'https://github.com/soyoooooon/BootCamp'),
+(3, 'TEAM PAGE', 'HTML & CSS & Java Script', 'Design - Yufeng Lin', ' This is how being a team', 'team-mockup.png', 'https://github.com/soyoooooon/Lee_S-Lin_teampage'),
+(4, 'Banana Slicer', 'HTML & SASS & Node.js', 'Design - myself', 'Just look at this amazin Banna Slicer :p', 'banana-mockup.png', 'https://github.com/soyoooooon/Lee_Soyoon_HeroukuTest');
 
 -- --------------------------------------------------------
 
