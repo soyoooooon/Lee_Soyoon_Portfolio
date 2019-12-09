@@ -15,11 +15,15 @@
       url("../css/ShareTechMono-Regular.woff");
 }
 
+@media screen 
+and (min-device-width: 1280px) 
+and (max-device-width: 1600px) {
+
 main{
 width: 100vw;
 overflow-x:hidden;
 padding:0;
-margin:0;
+margin:0%;
 }
 
 
@@ -44,16 +48,18 @@ h2{font-family: "Andale Mono";
 .img-con{
     height: 235px;
     transform: rotate(-45deg);
-    // vertical-align: middle;
+    vertical-align: middle;
     width:235px;
     top: 7vh;
     left: 15vw;
     position: relative;
     background-image: url(../images/pro.png);
-    background-attachment: fixed;
+    background-attachment: fixed !important; //it's not working in firefox. . .
     justify-content: center;
     z-index: 1;
-}
+    }
+  
+
 
 marquee{
     width: 30vw; height: 30vh;
@@ -235,16 +241,7 @@ text-align: center;
      display: block;
        text-align: center;}
 
-
-
-
-
-     //Contact form  
-     
-    //  .contact{
-    //      width: 100vw;
-    //      height: 100vh;
-         
+//Contact form
 
        #form {
         display:none;
@@ -299,3 +296,37 @@ text-align: center;
         .show-cont { 
             display: block !important; 
               text-align: center;}
+
+
+        }
+
+        .sendit{
+            display:none;
+            width: 70vw;
+            height: 100vh;
+            margin: 0 auto;
+            text-align: center;
+            background-color: #161616;
+           background-image: url(../images/thankyou.png);
+            position: absolute;
+            top: 50vh;
+            left: 10vw;
+            z-index: 1;
+            border-radius: 2px;
+        
+            h2{font-family: 'Share Tech Mono', monospace;
+                margin: 10%;
+                text-align: center;
+                  font-size: 2rem; color:white;}
+
+          h3{
+            font-family: 'Share Tech Mono', monospace;
+            text-align: center;
+            font-size: 2rem; color:white}
+        
+                        }
+
+        .sendPage{
+        display: block !important;
+        text-align: center;
+        }
