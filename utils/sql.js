@@ -1,8 +1,9 @@
-const sql = require('sql');
+const sql = require('mysql');
 const config = require('../config');
 
-const connect = sql.createPool({
+const connect = sql.createPool ({
     host: config.host,
+    port: config.port,
     user: config.user,
     password: config.password,
     database: config.database,
@@ -11,5 +12,5 @@ const connect = sql.createPool({
     waitForConnections : true
 });
 
-
 module.exports = connect;
+
