@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Dec 08, 2019 at 08:47 AM
+-- Generation Time: Dec 09, 2019 at 03:39 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.3.8
 
@@ -64,7 +64,7 @@ CREATE TABLE `tbl_bio` (
 --
 
 INSERT INTO `tbl_bio` (`id`, `job`, `feature`, `extra`) VALUES
-(1, 'A Front-end developer, Designer based in London, Ontario.\r\n\r\n', 'Love cuddling with computers than humans ;) \r\n\r\nshy but down to the earth.\r\n', 'Trilingual: Korean, English, Computer Language.');
+(1, 'A Front-end developer, Designer based in London, Ontario.\r\n\r\n', 'Love cuddling with computers than humans ;) \r\n\r\nshy but down to earth.\r\n', 'Trilingual: Korean, English, Computer Language.');
 
 --
 -- Indexes for dumped tables

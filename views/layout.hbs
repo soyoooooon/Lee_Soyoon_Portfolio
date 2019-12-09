@@ -22,7 +22,7 @@
       <li><a href="#about">ABOUT</a></li>
       <li><a href="#work">WORK</a></li>
       <li><a href="#video">VIDEO</a></li>
-      <li><a href="#" class="nav-cont">CONTACT</a></li>
+      <li><a href="#form" class="nav-cont">CONTACT</a></li>
     </ul>
   </nav>
   
@@ -58,15 +58,18 @@
 {{!-- <section id="contact"> --}}
  <div id="form">
                 <h2>LET'S GET IN TOUCH...</h2>
-                <form id="plz" action="#" method="get">
-                    <input placeholder="Name" type="text">
-                    <input placeholder="Email" type="email">
-                    <input placeholder="Phone Number" type="number">
-                    <textarea placeholder="Message..."></textarea>
-                    <button class="submit-btn">SUBMIT</button>
+                <form id="plz" action="/send" method="POST">
+                    <input placeholder="Name" type="text" name="name">
+                    <input placeholder="Email" type="email" name="email">
+                    <input placeholder="Phone Number" type="number" name="phone">
+                    <textarea placeholder="Message..." name="message"></textarea>
+                    <button type="submit" class="submit-btn">SUBMIT</button>
                 </form>
             </div>
-  </section>
+ <div class="sendit">
+ <h2>Thank you for contact!</h2>
+ <h3>I'll respond to your contact as quickly as possible.:)</h3>
+ </div>
 
 <footer id="foot">
   <ul class="icons">

@@ -11,7 +11,8 @@ let burger = document.querySelector('.burger');
 let conTact = document.querySelector('#form');
 let contBtn = document.querySelector('.nav-cont');
 let myFace = document.querySelector('.myFace');
-// let marQuee = document.querySelector('.infinite')
+let submitBtn = document.querySelector('.submit-btn');
+let submitSend = document.querySelector('.sendit');
 
 function imgChange(){
     let offset = 450,
@@ -64,6 +65,7 @@ function showLight(data, el) {
 
 };
 
+
 //Light box ended...
 
 
@@ -97,6 +99,14 @@ function intoContact(){
   //debugger;
 };
 
+function clickSubmit(){
+  let url = `/send`
+    submitSend.classList.toggle('sendPage');
+
+  
+}
+
+
 
 myData.forEach(button => button.addEventListener("click", imgChange));
 myData.forEach(button => button.addEventListener("click", fetchData));
@@ -104,4 +114,5 @@ closeBtn.addEventListener("click", closePop);
 clickBox.addEventListener("click",clickMenu);
 contBtn.addEventListener("click", intoContact);
 myFace.addEventListener("click", heLLo);
+submitBtn.addEventListener("click",clickSubmit);
 })();
