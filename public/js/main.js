@@ -76,18 +76,18 @@ function clickMenu() {
 
 };
 
-// window.onscroll = function (){
+window.onscroll = function (){
 
-// let scrollPosition = window.pageYOffset 
+let scrollPosition = window.pageYOffset 
   
-//   scrollPosition = window.scrollY;
-//   // console.log(scrollPosition);
-// };
+  scrollPosition = window.scrollY;
+  // console.log(scrollPosition);
+};
   
 function heLLo() {
   let scrollPosition = window.pageYOffset 
   scrollPosition = window.scrollY;
-    window.scrollTo(3,526);
+    window.scrollTo(0,711);
 
     
   };

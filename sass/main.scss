@@ -12,12 +12,620 @@
 @font-face {
  font-family: 'Share Tech Mono', monospace;
  src: url("../css/ShareTechMono-Regular.woff"),
-      url("../css/ShareTechMono-Regular.woff");
-}
+      url("../css/ShareTechMono-Regular.woff");}
+
+
+
+
+
+
+//Tablet....
+@media only screen and 
+(max-device-width : 1023px) and (min-device-width : 768px){
+html,body{ width: 100vw;overflow-x:hidden;}
+
+    main{
+    width: 100vw;
+    overflow-x:hidden;
+    padding:0;
+    margin:0%;
+    }
+    
+    
+    
+    #about{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    .black-about{
+    width: 100vw;
+    height: 100vh;
+    background-color: #161616;
+    
+    h2{font-family: "Andale Mono";
+        padding-top: 3vh;
+        padding-left: 2vw;
+        font-size: 3rem; color: white; text-align:left}
+    
+    .img-con{
+        height: 245px;
+        transform: rotate(-45deg);
+        vertical-align: middle;
+        width:245px;
+        top: 3vh;
+        left: 35vw;
+        position: relative;
+        background-image: url(../images/pro.png);
+        background-attachment: fixed !important; //it's not working in firefox. . .
+        justify-content: center;
+        z-index: 1;
+        margin-bottom: 15vh;
+        }
+      
+    
+    
+    marquee{
+    display:none;}
+          
+    
+    }
+    
+    #about-dynamic{
+        width: 90vw;
+       
+        
+    background-color: white;
+    padding: 5%;
+    
+    h1{
+    font-family: 'PhosphateInline';
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 0.8vw;
+    font-weight: 400;
+    margin-bottom: 3vh;
+     span{font-size: 5rem;}}
+    h2,h3{
+        font-family: 'Share Tech Mono', monospace;
+        font-size:1.5rem; letter-spacing: 2px; text-align: center; padding: 1.5%;}
+        p{font-family: 'Share Tech Mono', monospace;
+        padding: 1%; font-size: 1.2rem; letter-spacing: 1.5px; text-align: center;}
+    
+    //dynamic h2 h3 do styling !!!!!!!!!!!!!!!!!!!
+    
+    
+    .skill{
+    width: 60vw;
+    height: 200px;
+    margin-top: 13vh;
+    margin-left: 15vw;
+    display:flex;
+    flex-direction: row;
+    
+    img{width: 25vw; height: 20vh; margin: 5%;}
+    
+    .etc{
+    width: 45vw;
+    margin-top:4vh;
+    text-align: center;
+     li{ font-family: 'Share Tech Mono', monospace;
+        font-size: 1rem; margin: 3%;
+        color: #515151;
+        list-style: none;
+         span{font-size: 1.2rem; font-weight: 500; letter-spacing: 5px; color: black;}} //li
+    }//etc
+    
+    }}} //about
+
+    #work{
+        width: 100vw;
+        height: 70vh;
+        position: relative;
+        top: 25vh;
+        background-color:#f2f2f2;
+        flex-direction: column;
+    
+        
+        .white-forT
+        {width: 90vw;
+        height: 50vh;
+        margin:0 auto;
+        top: 4vh;
+        position: relative;
+    //    border: solid orange 2px;
+        justify-content: center;
+        background-color: white;
+        
+        #img-here{
+          width: 450px;
+          height: 330px;
+          position: absolute;
+          z-index: 1;
+          top: 6vh;
+          left: 20vw;
+          overflow:hidden;
+        
+        .img-cont{
+            position:relative; width:1800px; transition: all .5s;
+            img{width: 450px; float:left;} }
+        
+        }}
+      //WORK PORTFOLIO DONE
+        
+    
+      .black-g
+      {
+      width: 100vw;
+      height: 20vh;
+    //   top: 10vh;
+      display:flex;
+      flex-direction: row;
+      background-color: black;
+      
+      .workData{
+      color:white;
+      width: 100vw;
+      font-size: 1.5rem;
+      margin-top: 5vh;
+      padding: 3%;
+      
+      &:hover{cursor: pointer;}}}
+    }//work
+  
+    #video{
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        top: 30vh;
+        background-color:white;
+    
+      video{ width: 90vw; margin: 5vw;}
+    
+            }
+    
+    
+    
+    .popover { 
+        display: none;
+        position: absolute;
+        background-color:rgba(71,70,70,0.8);
+        width:95vw;
+        left: 3vw;
+        height: 70vh;
+        top: 200vh;
+        z-index: 999;
+        border-radius: 8px;
+        padding: 4px;
+    
+    
+        h2 {font-size: 2.5rem; font-weight: 300; 
+            font-family: 'Share Tech Mono', monospace;
+            color: seashell; margin-bottom: 10px;}
+        
+        h3,p{
+        padding: 2%;
+        font-family: 'Share Tech Mono', monospace;
+        font-size: 1.5rem;
+        color: seashell;
+        }
+    
+        .close-btn{ background: none;
+                    margin-left: 90vw;
+                    border:none; font-size:50px;
+                    font-family: 'Share Tech Mono', monospace; }
+    
+        .workImg img { width: 250px; height: 150px;}
+    
+        .link{
+            img{width: 50px; padding: 3%;}}
+                                    } //lightbox
+     
+      .show-popover { 
+         display: block;
+           text-align: center;}
+      
+    
+           #form {
+            display:none;
+            width: 70vw;
+            height: 70vh;
+            margin: 0 auto;
+            text-align: center;
+            background-color: #161616;
+            position: absolute;
+            top: 50vh;
+            left: 10vw;
+            z-index: 1;
+            border-radius: 2px;
+            
+            h2{font-family:"PhosphateInline"; font-size:2rem; color: white; margin: 40px; text-align: center;}
+    
+            input {
+                width: 50vw;
+                height: 30px;
+                margin-top: 40px;
+                padding: 5px;
+                border: solid ;
+                font-size: 1.25em;}
+        
+            textarea {
+                width: 50vw;
+                height: 160px;
+                margin-top: 30px;
+                padding: 5px;
+                border: solid 3px;
+                font-size: 1.25em;}
+        
+            .submit-btn{
+                width: 50vw;
+                height: 45px;
+                border: none;
+                background-color: #161616;
+                color: whitesmoke;
+                font-size: 1.2em;
+                margin-top: 30px;
+                transition: .3s;
+                &:hover{
+                  transform: scale(1.01);
+                  background-color: violet;
+                  cursor: pointer;
+                  }}
+                        
+                }  //form
+    
+                .show-cont { 
+                    display: block !important; 
+                      text-align: center;}
+    
+            .sendit{
+                display:none;
+                width: 70vw;
+                height: 100vh;
+                margin: 0 auto;
+                text-align: center;
+                background-color: #161616;
+               background-image: url(../images/thankyou.png);
+                position: absolute;
+                top: 50vh;
+                left: 10vw;
+                z-index: 1;
+                border-radius: 2px;
+            
+                h2{font-family: 'Share Tech Mono', monospace;
+                    margin: 10%;
+                    text-align: center;
+                      font-size: 2rem; color:white;}
+    
+              h3{
+                font-family: 'Share Tech Mono', monospace;
+                text-align: center;
+                font-size: 2rem; color:white}
+            
+                            }
+    
+            .sendPage{
+            display: block !important;
+            text-align: center;
+            }
+        }
+    
+
+
+
+
+
+
+
+
+
+
+////////laptop    
+@media only screen and
+(max-device-width: 1280px) and (min-device-width: 1024px){
+    html,body{ width: 100vw;overflow-x:hidden;}
+
+    main{
+    width: 100vw;
+    overflow-x:hidden;
+    padding:0;
+    margin:0%;
+    }
+    
+    
+    
+    #about{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    
+    .black-about{
+    width: 50vw;
+    background-color: #161616;
+    
+    h2{font-family: "Andale Mono";
+        padding-top: 3vh;
+        padding-left: 2vw;
+        font-size: 3rem; color: white; text-align:left}
+    
+    
+    
+    .img-con{
+        height: 235px;
+        transform: rotate(-45deg);
+        vertical-align: middle;
+        width:235px;
+        top: 17vh;
+        left: 13vw;
+        position: relative;
+        background-image: url(../images/pro.png);
+        background-attachment: fixed !important; //it's not working in firefox. . .
+        justify-content: center;
+        z-index: 1;
+        }
+      
+    
+    
+    marquee{
+        width: 30vw; height: 30vh;
+        color: rgba(214,211,211,0.6);
+        top: -5vh;
+        left: 0vw;
+        font-size: 2rem;
+        position: relative;}
+          
+    
+    }
+    
+    #about-dynamic{
+        width: 50vw;
+    background-color: white;
+    padding: 3%;
+    
+    h1{
+    font-family: 'PhosphateInline';
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 0.8vw;
+    font-weight: 400;
+    margin-bottom: 3vh;
+     span{font-size: 5rem;}}
+    h2,h3{
+        font-family: 'Share Tech Mono', monospace;
+        font-size:1.5rem; letter-spacing: 2px; text-align: center; padding: 1.5%;}
+        p{font-family: 'Share Tech Mono', monospace;
+        padding: 1%; font-size: 1.2rem; letter-spacing: 1.5px; text-align: center;}
+    
+    //dynamic h2 h3 do styling !!!!!!!!!!!!!!!!!!!
+    
+    
+    .skill{
+    width: 50vw;
+    height: 200px;
+    margin-top: 7vh;
+    display:flex;
+    flex-direction: row;
+    
+    
+    
+    img{width: 25vw; height: 20vh; margin: 5%;}
+    
+    .etc{
+    width: 50vw;
+    margin-top:4vh;
+    text-align: center;
+     li{ font-family: 'Share Tech Mono', monospace;
+        font-size: 1rem; margin: 3%;
+        color: #515151;
+        list-style: none;
+         span{font-size: 1.2rem; font-weight: 500; letter-spacing: 5px; color: black;}} //li
+    }//etc
+    
+    }}} //about
+     
+    //do portfolio
+
+#work{
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    overflow-x:hidden;
+    background-color:#f2f2f2;
+    flex-direction: row;
+
+    
+    .white-g
+    {width: 43vw;
+    height: 80vh;
+    background-color: white;}
+    
+    
+    #img-here{
+      width: 450px;
+      height: 330px;
+      position: absolute;
+      z-index: 1;
+      top: 220vh;
+      left: 10vw;
+      margin:0 auto;
+      overflow:hidden;
+    
+    .img-cont{
+        position:relative; width:1800px; transition: all .5s;
+        img{width: 450px; float:left;} }
+     }
+  //WORK PORTFOLIO DONE
+    
+
+    .black-g
+    {
+    width: 57vw;
+    height: 80vh;
+    display:flex;
+    flex-direction: column;
+    // position: relative;
+    
+    background-color: black;
+    
+    .workData{
+    color:white;
+    width: 20vw;
+    // display:flex;
+    // flex-direction: column;
+    font-size: 2rem;
+    // margin-top:1vh;
+    margin-left: 14vw;
+    margin-top: 2vh;
+    padding: 5%;
+    
+    &:hover{cursor: pointer;}}
+}}//work
+
+#video{
+    width: 100vw;
+    height: 100vh;
+    background-color:white;
+
+  video{ width: 90vw; margin: 5vw;}
+
+        }
+
+
+
+.popover { 
+    display: none;
+    position: absolute;
+    background-color:rgba(71,70,70,0.8);
+    width:95vw;
+    left: 3vw;
+    height: 100vh;
+    top: 200vh;
+    z-index: 999;
+    border-radius: 8px;
+    padding: 4px;
+
+
+    h2 {font-size: 2.5rem; font-weight: 300; 
+        font-family: 'Share Tech Mono', monospace;
+        color: seashell; margin-bottom: 10px;}
+    
+    h3,p{
+    padding: 2%;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.5rem;
+    color: seashell;
+    }
+
+    .close-btn{ background: none;
+                margin-left: 90vw;
+                border:none; font-size:50px;
+                font-family: 'Share Tech Mono', monospace; }
+
+    .workImg img { width: 250px; height: 150px;}
+
+    .link{
+        img{width: 50px; padding: 3%;}}
+                                } //lightbox
+ 
+  .show-popover { 
+     display: block;
+       text-align: center;}
+  
+
+       #form {
+        display:none;
+        width: 70vw;
+        height: 100vh;
+        margin: 0 auto;
+        text-align: center;
+        background-color: #161616;
+        position: absolute;
+        top: 50vh;
+        left: 10vw;
+        z-index: 1;
+        border-radius: 2px;
+        
+        h2{font-family:"PhosphateInline"; font-size:2rem; color: white; margin: 40px; text-align: center;}
+
+        input {
+            width: 50vw;
+            height: 30px;
+            margin-top: 40px;
+            padding: 5px;
+            border: solid ;
+            font-size: 1.25em;}
+    
+        textarea {
+            width: 50vw;
+            height: 160px;
+            margin-top: 30px;
+            padding: 5px;
+            border: solid 3px;
+            font-size: 1.25em;}
+    
+        .submit-btn{
+            width: 50vw;
+            height: 45px;
+            border: none;
+            background-color: #161616;
+            color: whitesmoke;
+            font-size: 1.2em;
+            margin-top: 30px;
+            transition: .3s;
+            &:hover{
+              transform: scale(1.01);
+              background-color: violet;
+              cursor: pointer;
+              }}
+                    
+            }  //form
+
+            .show-cont { 
+                display: block !important; 
+                  text-align: center;}
+
+        .sendit{
+            display:none;
+            width: 70vw;
+            height: 100vh;
+            margin: 0 auto;
+            text-align: center;
+            background-color: #161616;
+           background-image: url(../images/thankyou.png);
+            position: absolute;
+            top: 50vh;
+            left: 10vw;
+            z-index: 1;
+            border-radius: 2px;
+        
+            h2{font-family: 'Share Tech Mono', monospace;
+                margin: 10%;
+                text-align: center;
+                  font-size: 2rem; color:white;}
+
+          h3{
+            font-family: 'Share Tech Mono', monospace;
+            text-align: center;
+            font-size: 2rem; color:white}
+        
+                        }
+
+        .sendPage{
+        display: block !important;
+        text-align: center;
+        }
+    }
+
+
+
+
+
 
 
 // Big desktop
-@media only screen and 
+@media only screen and
  (min-device-width: 1280px){
  
 
@@ -71,8 +679,7 @@ marquee{
     top: -5vh;
     left: 0vw;
     font-size: 2rem;
-    position: relative;
-}
+    position: relative;}
       
 
 }
@@ -89,19 +696,16 @@ font-size: 2rem;
 letter-spacing: 0.8vw;
 font-weight: 400;
 margin-bottom: 3vh;
- span{
-font-size: 5rem;
-}
-}
+ span{font-size: 5rem;}}
 h2,h3{
     font-family: 'Share Tech Mono', monospace;
     font-size:1.5rem; letter-spacing: 2px; text-align: center; padding: 1.5%;}
     p{font-family: 'Share Tech Mono', monospace;
-    padding: 1%; font-size: 1.2rem; letter-spacing: 1.5px; text-align: center;}
+    padding: 1%; font-size: 1.3rem; letter-spacing: 1.5px; text-align: center;}
 
 //dynamic h2 h3 do styling !!!!!!!!!!!!!!!!!!!
 
-}
+
 .skill{
 width: 50vw;
 height: 200px;
@@ -111,25 +715,22 @@ flex-direction: row;
 
 
 
-img{width: 25vw; height: 20vh; margin: 5%;}
+img{width: 30vw; height: 25vh; margin: 5%;}
 
 .etc{
 width: 50vw;
-margin-top:4vh;
+margin-top:7vh;
 text-align: center;
-    li{ font-family: 'Share Tech Mono', monospace;
-        font-size: 1rem; margin: 3%;
-        color: #515151;
-        list-style: none;
-    
-    
-        span{font-size: 1.2rem; font-weight: 500; letter-spacing: 5px; color: black;}}
-}
+ li{ font-family: 'Share Tech Mono', monospace;
+    font-size: 1rem; margin: 3%;
+    color: #515151;
+    list-style: none;
+     span{font-size: 1.2rem; font-weight: 500; letter-spacing: 5px; color: black;}} //li
+}//etc
 
 }
 
-
-}
+}}
 
 //do portfolio
 
@@ -153,15 +754,13 @@ text-align: center;
       position: absolute;
       z-index: 1;
       top: 220vh;
-      left: 10vw;
+      left: 15vw;
       margin:0 auto;
       overflow:hidden;
     
     .img-cont{
         position:relative; width:1800px; transition: all .5s;
-    
-        img{width: 450px; float:left;}
-    }
+        img{width: 450px; float:left;} }
     
     }
   //WORK PORTFOLIO DONE
@@ -171,6 +770,8 @@ text-align: center;
     {
     width: 57vw;
     height: 80vh;
+    display:flex;
+    flex-direction: column;
     // position: relative;
     
     background-color: black;
@@ -178,12 +779,12 @@ text-align: center;
     .workData{
     color:white;
     width: 20vw;
-    display:flex;
-    flex-direction: column;
+    // display:flex;
+    // flex-direction: column;
     font-size: 2rem;
     // margin-top:1vh;
     margin-left: 14vw;
-
+    margin-top: 3vh;
     padding: 5%;
     
     &:hover{cursor: pointer;}
@@ -195,11 +796,11 @@ text-align: center;
     width: 100vw;
     height: 100vh;
     background-color:white;
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
 
   video{ width: 90vw; margin: 5vw;}
 
-}
+        }
 
 
 
@@ -265,8 +866,7 @@ text-align: center;
             margin-top: 40px;
             padding: 5px;
             border: solid ;
-            font-size: 1.25em;
-        }
+            font-size: 1.25em;}
     
         textarea {
             width: 50vw;
@@ -274,9 +874,7 @@ text-align: center;
             margin-top: 30px;
             padding: 5px;
             border: solid 3px;
-            
-            font-size: 1.25em;
-        }
+            font-size: 1.25em;}
     
         .submit-btn{
             width: 50vw;
@@ -292,14 +890,14 @@ text-align: center;
               background-color: violet;
               cursor: pointer;
               }}
-                    
-         }
+       }        
+         
         .show-cont { 
             display: block !important; 
               text-align: center;}
 
 
-        }
+        
 
         .sendit{
             display:none;
@@ -331,4 +929,4 @@ text-align: center;
         display: block !important;
         text-align: center;
         }
-    
+ }
