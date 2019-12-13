@@ -4,10 +4,8 @@
 @font-face {
     font-family: "PhosphateInline";
     src: url("../css/PhosphateInline.woff"),
-         url("../css/PhosphateInline.woff2");
-    
+         url("../css/PhosphateInline.woff2");    
 }
-
 
 @font-face {
  font-family: 'Share Tech Mono', monospace;
@@ -15,13 +13,539 @@
       url("../css/ShareTechMono-Regular.woff");}
 
 
+ @media only screen and 
+(max-width : 568px) and (min-width : 320px){
+html,body{ width: 100vw;overflow-x:hidden;}
+main{
+    width: 100vw;
+    overflow-x:hidden;
+    padding:0;
+    margin:0%;
+    }
+
+    #about{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        
+        .black-about{
+        width: 100vw;
+        height: 100vh;
+        background-color: #161616;
+        
+        h2{font-family: "Andale Mono";
+            padding-top: 3vh;
+            padding-left: 2vw;
+            font-size: 2rem; color: white; text-align:left}
+        
+        .img-con{
+            height: 220px;
+            transform: rotate(-45deg);
+            vertical-align: middle;
+            width:220px;
+            top: 3vh;
+            left: 24vw;
+            position: relative;
+            background-image: url(../images/pro.png);
+            background-attachment: fixed !important; //it's not working in firefox. . .
+            justify-content: center;
+            z-index: 1;
+            margin-bottom: 15vh;
+            }
+        marquee{
+        display:none;}
+        }
+        
+        #about-dynamic{
+            width: 90vw;
+            background-color: white;
+            padding: 5%;
+        
+        h1{
+        font-family: 'PhosphateInline';
+        text-align: center;
+        font-size: 2rem;
+        letter-spacing: 0.8vw;
+        font-weight: 400;
+        margin-bottom: 3vh;
+         span{font-size: 5rem;}}
+        h2,h3{
+            font-family: 'Share Tech Mono', monospace;
+            font-size:1.5rem; letter-spacing: 2px; text-align: center; padding: 1.5%;}
+            p{font-family: 'Share Tech Mono', monospace;
+            padding: 1%; font-size: 1.2rem; letter-spacing: 1.5px; text-align: center;}
+        
+        //dynamic h2 h3 do styling !!!!!!!!!!!!!!!!!!!
+        
+        
+        .skill{
+        width: 60vw;
+        height: 200px;
+        margin-top: 3vh;
+        margin-left: 5vw;
+        display:flex;
+        flex-direction: row;
+        
+        img{width: 30vw; height: 30vh; margin: 2%;}
+        
+        .etc{
+        width: 30vw;
+        margin-top:8vh;
+        text-align: center;
+         li{ font-family: 'Share Tech Mono', monospace;
+            font-size: 1rem; margin: 3%;
+            color: #515151;
+            list-style: none;
+             span{font-size: 1rem; font-weight: 500; letter-spacing: 5px; color: black;}} //li
+        }//etc
+        
+        }}} //about
+    
+        #work{
+            width: 100vw;
+            height: 40vh;
+            position: relative;
+            top: 50vh;
+            background-color:#f2f2f2;
+            flex-direction: column;
+        
+            
+            .white-forT
+            {display: none;
+            
+            #img-here{
+             display:none;
+            
+            .img-cont{
+                display:none} }}
+            
+                .black-g
+                {
+                width: 100vw;
+                height: 40vh;
+              //   top: 10vh;
+                display:flex;
+                flex-direction: column;
+                background-color: black;
+                
+                .workData{
+                color:white;
+                width: 100vw;
+                font-size: 1.5rem;
+                margin-top: 2vh;
+                text-align:center;
+                padding: 2%;
+                
+                &:hover{cursor: pointer;}}}
+              }//work
+              #video{
+                width: 100vw;
+                height: 100vh;
+                position: relative;
+                top: 50vh;
+                background-color:white;
+                justify-content: center;
+            
+              video{width: 90vw; margin: 5vw;}
+            
+                    }
+    
+                    .popover { 
+                        display: none;
+                        position: absolute;
+                        background-color:rgba(71,70,70,0.8);
+                        width:90vw;
+                        left: 1vw;
+                        height: 70vh;
+                        top: 205vh;
+                        z-index: 999;
+                        border-radius: 8px;
+                        padding: 4px;
+                    
+                    
+                        h2 {font-size: 2.2rem; font-weight: 300; 
+                            font-family: 'Share Tech Mono', monospace;
+                            color: seashell; margin-bottom: 10px;}
+                        
+                        h3,p{
+                        padding: 2%;
+                        font-family: 'Share Tech Mono', monospace;
+                        font-size: 1.2rem;
+                        color: seashell;
+                        }
+                    
+                        .close-btn{ background: none;
+                                    float:right;
+                                    border:none; font-size:50px;
+                                    font-family: 'Share Tech Mono', monospace; }
+                    
+                        .workImg img { width: 250px; height: 150px;}
+                    
+                        .link{
+                            img{width: 50px; padding: 3%;}}
+                                                    } //lightbox
+                     
+                      .show-popover { 
+                         display: block;
+                           text-align: center;}
+                           #form {
+                            display:none;
+                            width: 70vw;
+                            height: 110vh;
+                            margin: 0 auto;
+                            text-align: center;
+                            background-color: #161616;
+                            position: absolute;
+                            top: 50vh;
+                            left: 10vw;
+                            z-index: 1;
+                            border-radius: 2px;
+                            
+                            h2{font-family:"PhosphateInline"; font-size:2rem; color: white; margin: 40px; text-align: center;}
+                    
+                            input {
+                                width: 50vw;
+                                height: 30px;
+                                margin-top: 40px;
+                                padding: 5px;
+                                border: solid ;
+                                font-size: 1.25em;}
+                        
+                            textarea {
+                                width: 50vw;
+                                height: 160px;
+                                margin-top: 30px;
+                                padding: 5px;
+                                border: solid 3px;
+                                font-size: 1.25em;}
+                        
+                            .submit-btn{
+                                width: 50vw;
+                                height: 45px;
+                                border: none;
+                                background-color: #161616;
+                                color: whitesmoke;
+                                font-size: 1.2em;
+                                margin-top: 30px;
+                                transition: .3s;
+                                &:hover{
+                                  transform: scale(1.01);
+                                  background-color: violet;
+                                  cursor: pointer;
+                                  }}
+                                        
+                                }  //form
+                    
+                                .show-cont { 
+                                    display: block !important; 
+                                      text-align: center;}
+                    
+                            .sendit{
+                                display:none;
+                                width: 70vw;
+                                height: 100vh;
+                                margin: 0 auto;
+                                text-align: center;
+                                background-color: #161616;
+                               background-image: url(../images/thankyou.png);
+                                position: absolute;
+                                top: 50vh;
+                                left: 10vw;
+                                z-index: 1;
+                                border-radius: 2px;
+                            
+                                h2{font-family: 'Share Tech Mono', monospace;
+                                    margin: 10%;
+                                    text-align: center;
+                                      font-size: 2rem; color:white;}
+                    
+                              h3{
+                                font-family: 'Share Tech Mono', monospace;
+                                text-align: center;
+                                font-size: 2rem; color:white}
+                            
+                                            }
+                    
+                            .sendPage{
+                            display: block !important;
+                            text-align: center;
+                            }
+    }
+    
+    
+
+
+
+
+@media only screen and 
+(max-width : 767px) and (min-width :569px){
+    html,body{ width: 100vw;overflow-x:hidden;}
+
+    main{
+    width: 100vw;
+    overflow-x:hidden;
+    padding:0;
+    margin:0%;
+    }
+    
+    #about{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    .black-about{
+    width: 100vw;
+    height: 100vh;
+    background-color: #161616;
+    
+    h2{font-family: "Andale Mono";
+        padding-top: 3vh;
+        padding-left: 2vw;
+        font-size: 3rem; color: white; text-align:left}
+    
+    .img-con{
+        height: 245px;
+        transform: rotate(-45deg);
+        vertical-align: middle;
+        width:245px;
+        top: 3vh;
+        left: 35vw;
+        position: relative;
+        background-image: url(../images/pro.png);
+        background-attachment: fixed !important; //it's not working in firefox. . .
+        justify-content: center;
+        z-index: 1;
+        margin-bottom: 15vh;
+        }
+    marquee{
+    display:none;}
+    }
+    
+    #about-dynamic{
+        width: 90vw;
+        background-color: white;
+        padding: 5%;
+    
+    h1{
+    font-family: 'PhosphateInline';
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 0.8vw;
+    font-weight: 400;
+    margin-bottom: 3vh;
+     span{font-size: 5rem;}}
+    h2,h3{
+        font-family: 'Share Tech Mono', monospace;
+        font-size:1.5rem; letter-spacing: 2px; text-align: center; padding: 1.5%;}
+        p{font-family: 'Share Tech Mono', monospace;
+        padding: 1%; font-size: 1.2rem; letter-spacing: 1.5px; text-align: center;}
+    
+    //dynamic h2 h3 do styling !!!!!!!!!!!!!!!!!!!
+    
+    
+    .skill{
+    width: 60vw;
+    height: 200px;
+    margin-top: 3vh;
+    margin-left: 15vw;
+    display:flex;
+    flex-direction: row;
+    
+    img{width: 25vw; height: 20vh; margin: 5%;}
+    
+    .etc{
+    width: 45vw;
+    margin-top:4vh;
+    text-align: center;
+     li{ font-family: 'Share Tech Mono', monospace;
+        font-size: 1rem; margin: 3%;
+        color: #515151;
+        list-style: none;
+         span{font-size: 1.2rem; font-weight: 500; letter-spacing: 5px; color: black;}} //li
+    }//etc
+    
+    }}} //about
+
+    #work{
+        width: 100vw;
+        height: 40vh;
+        position: relative;
+        top: 50vh;
+        background-color:#f2f2f2;
+        flex-direction: column;
+    
+        
+        .white-forT
+        {display: none;
+        
+        #img-here{
+         display:none;
+        
+        .img-cont{
+            display:none} }}
+        
+            .black-g
+            {
+            width: 100vw;
+            height: 40vh;
+          //   top: 10vh;
+            display:flex;
+            flex-direction: column;
+            background-color: black;
+            
+            .workData{
+            color:white;
+            width: 100vw;
+            font-size: 1.5rem;
+            margin-top: 2vh;
+            text-align:center;
+            padding: 2%;
+            
+            &:hover{cursor: pointer;}}}
+          }//work
+          #video{
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            top: 50vh;
+            background-color:white;
+            
+        
+          video{ width: 90vw; margin: 5vw;}
+        
+                }
+
+                .popover { 
+                    display: none;
+                    position: absolute;
+                    background-color:rgba(71,70,70,0.8);
+                    width:95vw;
+                    left: 1vw;
+                    height: 77vh;
+                    top: 185vh;
+                    z-index: 999;
+                    border-radius: 8px;
+                    padding: 4px;
+                
+                
+                    h2 {font-size: 2.5rem; font-weight: 300; 
+                        font-family: 'Share Tech Mono', monospace;
+                        color: seashell; margin-bottom: 10px;}
+                    
+                    h3,p{
+                    padding: 2%;
+                    font-family: 'Share Tech Mono', monospace;
+                    font-size: 1.5rem;
+                    color: seashell;
+                    }
+                
+                    .close-btn{ background: none;
+                                margin-left: 90vw;
+                                border:none; font-size:50px;
+                                font-family: 'Share Tech Mono', monospace; }
+                
+                    .workImg img { width: 250px; height: 150px;}
+                
+                    .link{
+                        img{width: 50px; padding: 3%;}}
+                                                } //lightbox
+                 
+                  .show-popover { 
+                     display: block;
+                       text-align: center;}
+                       #form {
+                        display:none;
+                        width: 70vw;
+                        height: 100vh;
+                        margin: 0 auto;
+                        text-align: center;
+                        background-color: #161616;
+                        position: absolute;
+                        top: 50vh;
+                        left: 10vw;
+                        z-index: 1;
+                        border-radius: 2px;
+                        
+                        h2{font-family:"PhosphateInline"; font-size:2rem; color: white; margin: 40px; text-align: center;}
+                
+                        input {
+                            width: 50vw;
+                            height: 30px;
+                            margin-top: 40px;
+                            padding: 5px;
+                            border: solid ;
+                            font-size: 1.25em;}
+                    
+                        textarea {
+                            width: 50vw;
+                            height: 160px;
+                            margin-top: 30px;
+                            padding: 5px;
+                            border: solid 3px;
+                            font-size: 1.25em;}
+                    
+                        .submit-btn{
+                            width: 50vw;
+                            height: 45px;
+                            border: none;
+                            background-color: #161616;
+                            color: whitesmoke;
+                            font-size: 1.2em;
+                            margin-top: 30px;
+                            transition: .3s;
+                            &:hover{
+                              transform: scale(1.01);
+                              background-color: violet;
+                              cursor: pointer;
+                              }}
+                                    
+                            }  //form
+                
+                            .show-cont { 
+                                display: block !important; 
+                                  text-align: center;}
+                
+                        .sendit{
+                            display:none;
+                            width: 70vw;
+                            height: 100vh;
+                            margin: 0 auto;
+                            text-align: center;
+                            background-color: #161616;
+                           background-image: url(../images/thankyou.png);
+                            position: absolute;
+                            top: 50vh;
+                            left: 10vw;
+                            z-index: 1;
+                            border-radius: 2px;
+                        
+                            h2{font-family: 'Share Tech Mono', monospace;
+                                margin: 10%;
+                                text-align: center;
+                                  font-size: 2rem; color:white;}
+                
+                          h3{
+                            font-family: 'Share Tech Mono', monospace;
+                            text-align: center;
+                            font-size: 2rem; color:white}
+                        
+                                        }
+                
+                        .sendPage{
+                        display: block !important;
+                        text-align: center;
+                        }
+}
+
 
 
 
 
 //Tablet....
 @media only screen and 
-(max-device-width : 1023px) and (min-device-width : 768px){
+(max-width : 1023px) and (min-width : 768px){
 html,body{ width: 100vw;overflow-x:hidden;}
 
     main{
@@ -123,7 +647,7 @@ html,body{ width: 100vw;overflow-x:hidden;}
         width: 100vw;
         height: 70vh;
         position: relative;
-        top: 25vh;
+        top: 55vh;
         background-color:#f2f2f2;
         flex-direction: column;
     
@@ -143,7 +667,7 @@ html,body{ width: 100vw;overflow-x:hidden;}
           height: 330px;
           position: absolute;
           z-index: 1;
-          top: 6vh;
+          top: 2vh;
           left: 20vw;
           overflow:hidden;
         
@@ -152,14 +676,14 @@ html,body{ width: 100vw;overflow-x:hidden;}
             img{width: 450px; float:left;} }
         
         }}
-      //WORK PORTFOLIO DONE
+      //images. . . .. . .
         
     
       .black-g
       {
       width: 100vw;
-      height: 20vh;
-    //   top: 10vh;
+      height: 30vh;
+       top: 0vh;
       display:flex;
       flex-direction: row;
       background-color: black;
@@ -168,7 +692,7 @@ html,body{ width: 100vw;overflow-x:hidden;}
       color:white;
       width: 100vw;
       font-size: 1.5rem;
-      margin-top: 5vh;
+      margin-top: 4vh;
       padding: 3%;
       
       &:hover{cursor: pointer;}}}
@@ -178,7 +702,7 @@ html,body{ width: 100vw;overflow-x:hidden;}
         width: 100vw;
         height: 100vh;
         position: relative;
-        top: 30vh;
+        top: 50vh;
         background-color:white;
     
       video{ width: 90vw; margin: 5vw;}
@@ -191,9 +715,9 @@ html,body{ width: 100vw;overflow-x:hidden;}
         display: none;
         position: absolute;
         background-color:rgba(71,70,70,0.8);
-        width:95vw;
+        width:90vw;
         left: 3vw;
-        height: 70vh;
+        height: 80vh;
         top: 200vh;
         z-index: 999;
         border-radius: 8px;
@@ -212,7 +736,7 @@ html,body{ width: 100vw;overflow-x:hidden;}
         }
     
         .close-btn{ background: none;
-                    margin-left: 90vw;
+                    float:right;
                     border:none; font-size:50px;
                     font-family: 'Share Tech Mono', monospace; }
     
@@ -230,7 +754,7 @@ html,body{ width: 100vw;overflow-x:hidden;}
            #form {
             display:none;
             width: 70vw;
-            height: 70vh;
+            height: 100vh;
             margin: 0 auto;
             text-align: center;
             background-color: #161616;
@@ -323,7 +847,7 @@ html,body{ width: 100vw;overflow-x:hidden;}
 
 ////////laptop    
 @media only screen and
-(max-device-width: 1280px) and (min-device-width: 1024px){
+(max-width: 1280px) and (min-width: 1024px){
     html,body{ width: 100vw;overflow-x:hidden;}
 
     main{
@@ -519,7 +1043,7 @@ html,body{ width: 100vw;overflow-x:hidden;}
     }
 
     .close-btn{ background: none;
-                margin-left: 90vw;
+                float:right;
                 border:none; font-size:50px;
                 font-family: 'Share Tech Mono', monospace; }
 
@@ -626,7 +1150,7 @@ html,body{ width: 100vw;overflow-x:hidden;}
 
 // Big desktop
 @media only screen and
- (min-device-width: 1280px){
+ (min-width: 1280px){
  
 
 html,body{ width: 100vw;overflow-x:hidden;}
