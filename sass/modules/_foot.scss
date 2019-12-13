@@ -1,14 +1,50 @@
 
-
-
-
 @media only screen and 
-(max-device-width : 1023px) and (min-device-width : 768px){
+(max-width : 568px) and (min-width : 320px){
     #foot{
         background-color: white;
         width: 100vw;
         position: relative;
+        top: 20vh;
         
+        .icons{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+         li{ width: 50px; height: 50px; padding: 2%;
+            img{width: 50px; height: 50px;}}
+        }}
+ }
+
+
+
+@media only screen and 
+(max-width : 767px) and (min-width :569px){
+    #foot{
+        background-color: white;
+        width: 100vw;
+        position: relative;
+        top: 20vh;
+        
+        
+        .icons{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+         li{ width: 50px; height: 50px; padding: 2%;
+            img{width: 50px; height: 50px;}}
+        }}
+    }
+
+@media only screen and 
+(max-width : 1023px) and (min-width : 768px){
+    #foot{
+        background-color: white;
+        width: 100vw;
+        position: relative;
+        top: 30vh;
         
         .icons{
         display: flex;
@@ -28,7 +64,7 @@
 
 
 @media only screen and
-(max-device-width: 1280px) and (min-device-width: 1024px){
+(max-width: 1279px) and (min-width: 1024px){
 
     #foot{
         background-color: white;
@@ -50,7 +86,7 @@
 
 //big laptop
 @media only screen and 
-(min-device-width: 1280px){
+(min-width: 1280px){
 
 #foot{
 background-color: white;
