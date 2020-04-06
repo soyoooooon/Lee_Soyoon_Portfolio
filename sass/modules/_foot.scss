@@ -1,9 +1,28 @@
-@media only screen and 
-(max-width : 479px) and (min-width : 320px){
+
     #foot{
         background-color: white;
         width: 100vw;
-        margin-top: 30px;
+        margin-top: 430px;
+        position: relative;
+        
+        
+        .icons{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+         li{ width: 35px; height: 35px; padding: 2%;
+            img{width: 35px; height: 35px;}}
+        }}
+
+
+
+
+     @media only screen and (min-width : 480px) and (max-width: 543px){
+    #foot{
+        background-color: white;
+        width: 100vw;
+        margin-top: 230px;
         position: relative;
         
         
@@ -18,34 +37,15 @@
  }
 
 
-@media only screen and 
-(max-width : 568px) and (min-width : 480px){
-    #foot{
-        background-color: white;
-        width: 100vw;
-        margin-top: 30px;
-        position: relative;
-        
-        
-        .icons{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        
-         li{ width: 35px; height: 35px; padding: 2%;
-            img{width: 35px; height: 35px;}}
-        }}
- }
 
 
-
-@media only screen and 
-(max-width : 767px) and (min-width :569px){
+ @media only screen and 
+ (min-width : 543px) and  (max-width : 720px) {
     #foot{
         background-color: white;
         width: 100vw;
         position: relative;
-        top: 20vh;
+        margin-top: 300px;
         
         
         .icons{
@@ -58,13 +58,13 @@
         }}
     }
 
-@media only screen and 
-(max-width : 1023px) and (min-width : 768px){
+    @media only screen and 
+    (min-width : 721px) and  (max-width : 1023px) {
     #foot{
         background-color: white;
         width: 100vw;
         position: relative;
-        top: 10vh;
+        margin-top: 230px;
         
         .icons{
         display: flex;
@@ -104,21 +104,26 @@
 }
 
 
-//big laptop
-@media only screen and 
-(min-width: 1280px){
+@media only screen and
+        (min-width: 1024px) and (max-width: 1281px){
+            #foot{
+                background-color: white;
+                width: 100vw;
+                margin-top: 5vh;
+                
+                .icons{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                
+                 li{ width: 50px; height: 50px; padding: 2%;
+                    img{width: 50px; height: 50px;}}
+                }}
+        
 
-#foot{
-background-color: white;
-width: 100vw;
 
 
-.icons{
-display: flex;
-flex-direction: row;
-justify-content: center;
+        }
 
- li{ width: 50px; height: 50px; padding: 2%;
-    img{width: 50px; height: 50px;}}
-}}
-}
+        @media only screen and (min-width: 1282px){
+        }

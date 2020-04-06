@@ -1,5 +1,6 @@
 @import 'modules/_nav';
-@import 'modules/foot';
+@import 'modules/_foot';
+@import 'modules/_vars';
 
 @font-face {
     font-family: "PhosphateInline";
@@ -8,13 +9,13 @@
 }
 
 @font-face {
- font-family: 'Share Tech Mono', monospace;
- src: url("../css/ShareTechMono-Regular.woff"),
-      url("../css/ShareTechMono-Regular.woff");}
+    font-family: 'Oswald', sans-serif;
+ src: url("../css/Oswald-Bold.woff"),
+      url("../css/Oswald-ExtraLight.woff"),
+      url("../css/Oswald-Regular.woff");
+    }
 
 
-@media only screen and 
-(max-width : 479px) and (min-width : 320px){
 html,body{ width: 100vw;overflow-x:hidden;}
 
 main{
@@ -32,187 +33,322 @@ main{
         
         .black-about{
         width: 100vw;
-        height: 400px;
-        background-color: #161616;
-        
-        h2{font-family: "Andale Mono";
-            padding-top: 3vh;
-            padding-left: 2vw;
-            font-size: 2rem; color: white; text-align:left}
+        height: 350px;
+        background: rgb(22,22,22);
+background: linear-gradient(180deg, rgba(22,22,22,1) 18%, rgba(237,237,237,1) 84%, rgba(255,255,255,1) 100%);
         
         .img-con{
             height: 170px;
             transform: rotate(-45deg);
             vertical-align: middle;
             width:170px;
-            top: 3vh;
-            left: 24vw;
+           
+            margin: 0 auto;
             position: relative;
             background-image: url(../images/pro.png);
             background-attachment: fixed !important; //it's not working in firefox. . .
             justify-content: center;
             z-index: 1;
-            margin-bottom: 15vh;
-            }
-        marquee{
-        display:none;}
-        }
-        
-        #about-dynamic{
-            width: 90vw;
-            height: 450px;
+            margin-bottom: 15vh;}
+        //image container ends
+        }//gradient div ends
+
+        #intro-cont{
+            width: 100vw;
             background-color: white;
-            padding: 5%;
-        
-        h1{
-        font-family: 'PhosphateInline';
-        text-align: center;
-        font-size: 2rem;
-        letter-spacing: 0.8vw;
-        font-weight: 400;
-        margin-bottom: 3vh;
-         span{font-size: 5rem;}}
-        h2,h3{
-            font-family: 'Share Tech Mono', monospace;
-            font-size:1.5rem; letter-spacing: 2px; text-align: center; padding: 1.5%;}
-            p{font-family: 'Share Tech Mono', monospace;
-            padding: 1%; font-size: 1.2rem; letter-spacing: 1.5px; text-align: center;}
-        
-        //dynamic h2 h3 do styling !!!!!!!!!!!!!!!!!!!
-        
-        
-        .skill{
-        width: 60vw;
-        height: 200px;
-        margin-top: 3vh;
-        margin-left: 5vw;
-        display:flex;
-        flex-direction: row;
-        
-        img{width: 30vw; height: 30vh; margin: 2%;}
-        
-        .etc{
-        width: 30vw;
-        margin-top:8vh;
-        text-align: center;
-         li{ font-family: 'Share Tech Mono', monospace;
-            font-size: 1rem; margin: 3%;
-            color: #515151;
-            list-style: none;
-             span{font-size: 1rem; font-weight: 500; letter-spacing: 5px; color: black;}} //li
-        }//etc
-        
-        }}} //about
-    
+           
+            // opacity: 0;
+            // transition: all 200ms ease-in-out;
+            #intro{
+                margin-top: 100px;
+                font-family: $o-font;
+                text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c, 14px 6px 4px rgba(206,89,55,0);
+                font-size: 1.5em;
+                text-align: center;
+                margin-bottom: 50px;
+                opacity: 0;
+                transition: all 200ms ease-in-out;
+                span{
+                    font-family: $m-font;
+                    font-style: bolder;
+                    font-size: 2.2em;}
+                }//h2 ends
+
+            #onEp{
+                opacity: 0;
+                transition: all 250ms ease-in;
+                font-family: $o-font;
+                width: 80vw;
+                margin: 0 auto;
+                font-size: 1em;
+                line-height: 25px;
+                margin-bottom: 25px; }
+
+            .p-open1{
+                opacity: 1 !important;
+            }
+
+            #twOp{
+                opacity: 0;
+                transition: all 250ms ease-in;
+                font-family: $o-font;
+                width: 80vw;
+                margin: 0 auto;
+                font-size: 1em;
+                line-height: 25px;
+                margin-bottom: 100px;}
+                .p-open2{
+                    opacity: 1 !important;
+                }
+
+                .resume{
+                    width: 120px;
+                    height: 55px;
+                    border: none;
+                    border-radius: 15px;
+                    background-color: $black;
+                    color: white;
+                    font-size: 25px;
+                    text-align: center;
+                    margin-left: 35vw;
+                    cursor: pointer;
+                   
+
+                    a{
+                        color: white;
+                    text-decoration: none;}
+
+                    &:hover{
+                        transform: scale(1.1);
+                       
+                    }
+                }
+        } //intro
+
+        .intro-hi{
+            opacity: 1 !important;
+        }
+
+        .skill-set{
+            
+            margin: 143px auto 0 auto;
+            flex-direction: wrap;
+            flex-wrap: wrap;
+            h3{
+            font-size: 1.5em;
+            font-family: $o-font;
+            // text-align: center;
+            color: #333333;
+            text-shadow: 2px 2px 0px #FFFFFF, 5px 4px 0px rgba(0,0,0,0.15);
+            } //h3 ends
+           
+            img{
+                width: 45px;
+                height:45px;
+                filter: grayscale(1);
+                padding: 25px;
+                margin-top: 25px;
+                margin-left: -5vw;
+                
+            }
+        }
+        }//about
+    //work starts...
         #work{
             width: 100vw;
-            height: 300px;
-            margin-top: 500px;
-            
-            
-            background-color:#f2f2f2;
-            flex-direction: column;
-        
-            
-            .white-forT
-            {display: none;
-            
+            margin-top: 605px;
+            background-color:#ededed;
+
+            h2{
+            font-family: $m-font;
+            font-size: 2em;
+            margin-top: -10px;
+            text-align: center;
+            text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c, 14px 6px 4px rgba(206,89,55,0);
+            }
+
             #img-here{
-             display:none;
-            
-            .img-cont{
-                display:none} }}
+                width: 88vw;
+                // height: 330px;
+                position: absolute;
+                z-index: 1;
+                left: 5vw;
+                overflow:hidden;
+              
+              .img-cont{
+                
+                  position:relative; width:1800px; transition: all .5s;
+                  img{width: 450px; float:left; object-fit: contain;} }
+                }
+           
             
                 .black-g
                 {
                 width: 100vw;
-                height: 300px;
-              //   top: 10vh;
+                height: 250px;
+                margin-top: 300px;
                 display:flex;
-                flex-direction: column;
+                flex-direction: row;
                 background-color: black;
                 
                 .workData{
                 color:white;
                 width: 100vw;
-                font-size: 1.5rem;
-                margin-top: 4vh;
-                margin-left: 32vw;
-                padding: 2%;
+                font-size: 1em;
+                margin-top: 130px;
+                margin-left: 2vw;
+                padding:  0 0 0 25px;
                 
-                &:hover{cursor: pointer;}}}
+
+                &:hover{cursor: pointer;}}
+            }//black divs
               }//work
-              #video{
+
+              #design-cont{
                 width: 100vw;
-                height: 100vh;
-                position: relative;
-                top: 10vh;
-                background-color:white;
-                justify-content: center;
-            
-              video{width: 85vw; margin: 5vw;}
-            
+                height: 300px;
+                background: rgb(0,0,0);
+                background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(237,237,237,1) 79%, rgba(255,255,255,1) 100%);
+                
+              }
+             
+              #other-work{
+                  width: 100vw;
+                 height: 90%;
+                  display: flex;
+                  flex-wrap:wrap;
+                 
+
+                .etc-work{
+                    width: 85%;
+                    padding: 7%;
+                    
+                   
+
+                    img{
+                        width: 100%;
+                        filter: grayscale(100%);
+                        transition: all 0.5s ease-in;
                     }
+
+                    img:hover{
+                        filter:grayscale(0);
+                        cursor: pointer;
+                    }
+                }
+                
+              }
+
+              .contact-btn{
+                width: 120px;
+                    height: 55px;
+                    border: none;
+                    border-radius: 15px;
+                    background-color: $black;
+                    color: white;
+                    font-size: 25px;
+                    text-align: center;
+                    margin-left: 35vw;
+                    margin-top: 150px;
+                    cursor: pointer;
+                   
+
+                    a{
+                        color: white;
+                    text-decoration: none;}
+
+                    &:hover{
+                        transform: scale(1.1);
+                       
+                    }
+
+              }
+
     
                     .popover { 
                         display: none;
                         position: absolute;
-                        background-color:rgba(71,70,70,0.8);
-                        width:90vw;
-                        left: 3vw;
-                        height: 450px;
-                        top: 265vh;
+                        background-color:rgba(22,22,22,0.97);
+                        width:100vw;
+                        left: 0vw;
+                        top: 320vh;
+                        height: 250vh;
+                        // top: 265vh;
                         z-index: 999;
                         border-radius: 8px;
                         padding: 4px;
                     
                     
-                        h2 {font-size: 2rem; font-weight: 300; 
-                            margin-top: 5vh;
-                            font-family: 'Share Tech Mono', monospace;
-                            color: seashell; margin-bottom: 10px;}
+                        h2 {font-size: 2.2rem; font-weight: 300; 
+                            
+                            margin-top: 105px;
+                            
+                            font-family: $o-font;
+                            color: seashell; margin-bottom: 100px;}
                         
-                        h3,p{
-                        padding: 2%;
-                        font-family: 'Share Tech Mono', monospace;
-                        font-size: 1rem;
-                        margin-bottom: 3vh;
+                        h3{font-family: $o-font;
+                            font-size: 1em;  
+                            margin-bottom: 30px;
+                            width: 90vw;
+                            padding: 1.5%;
+                            color: seashell;
+                            
+                        }
+                        
+                        .text,.text-2{
+                        width: 90vw;
+                        padding: 1.5%;
+                        font-family: $o-font;
+                        font-size: 1em;
+                        line-height: 45px;
                         color: seashell;
+
                         }
                     
                         .close-btn{ background: none;
                                     float:right;
-                                    border:none; font-size:50px;
-                                    font-family: 'Share Tech Mono', monospace; }
+                                    margin-right: 15px;
+                                    cursor: pointer;
+                                    border:none; 
+                                    font-size:40px;
+                                    color:seashell;}
                     
-                        .workImg img { width: 250px; height: 150px;}
+                        .workImg img { 
+                            width: 95%; 
+                            margin-top: 100px;
+                            margin-left:-5vw;}
                     
                         .link{
-                            img{width: 50px; padding: 3%;}}
+                                margin-top: 120px;
+                                text-align: center;
+                            img{width: 55px; padding: 5%; margin-left:-7%}}
                                                     } //lightbox
                      
                       .show-popover { 
-                         display: block;
+                         display: block !important;
                            text-align: center;}
+                        //work - data done......
+
+
                            #form {
                             display:none;
                             width: 100vw;
-                            height: 700px;
-                            margin: 0 auto;
+                            height: 140vh;
+                            margin:0 auto;
                             text-align: center;
                             background-color: #161616;
                             position: absolute;
-                            top: 50vh;
+                            top: 30vh;
                             
                             z-index: 999;
                             border-radius: 2px;
                             
-                            h2{font-family:"PhosphateInline"; font-size:2rem; color: white; margin: 40px; text-align: center;}
+                            h2{font-family:"PhosphateInline"; font-size:2rem; color: white; margin-top: 130px; text-align: center;}
                     
                             input {
                                 width: 70vw;
                                 height: 30px;
-                                margin-top: 40px;
+                                margin-top: 30px;
                                 padding: 5px;
                                 border: solid ;
                                 font-size: 1.25em;}
@@ -232,7 +368,7 @@ main{
                                 background-color: #161616;
                                 color: whitesmoke;
                                 font-size: 1.2em;
-                                margin-top: 30px;
+                                margin-top: 60px;
                                 transition: .3s;
                                 &:hover{
                                   transform: scale(1.01);
@@ -260,13 +396,13 @@ main{
                                 z-index: 1;
                                 border-radius: 2px;
                             
-                                h2{font-family: 'Share Tech Mono', monospace;
+                                h2{font-family: 'Sen', sans-serif;
                                     margin: 10%;
                                     text-align: center;
                                       font-size: 2rem; color:white;}
                     
                               h3{
-                                font-family: 'Share Tech Mono', monospace;
+                                font-family: 'Sen', sans-serif;
                                 text-align: center;
                                 font-size: 2rem; color:white}
                             
@@ -276,283 +412,90 @@ main{
                             display: block !important;
                             text-align: center;
                             }
-    }
+    
 
 
 
 
- @media only screen and 
-(max-width : 568px) and (min-width : 480px){
-html,body{ width: 100vw;overflow-x:hidden;}
+@media only screen and (min-width : 480px) and (max-width: 543px){
+
+html,body{ width: 100vw;overflow-x:hidden;  position: absolute;}
 main{
     width: 100vw;
     overflow-x:hidden;
+    
     padding:0;
     margin:0%;
-    }
+   
 
-    #about{
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        
-        .black-about{
-        width: 100vw;
-        height: 400px;
-        background-color: #161616;
-        
-        h2{font-family: "Andale Mono";
-            padding-top: 3vh;
-            padding-left: 2vw;
-            font-size: 2rem; color: white; text-align:left}
-        
-        .img-con{
-            height: 200px;
-            transform: rotate(-45deg);
-            vertical-align: middle;
-            width:200px;
-            top: 2vh;
-            left: 27vw;
-            position: relative;
-            background-image: url(../images/pro.png);
-            background-attachment: fixed !important; //it's not working in firefox. . .
-            justify-content: center;
-            z-index: 1;
-            margin-bottom: 15vh;
-            }
-        marquee{
-        display:none;}
+
+    #work{
+        h2{
+            font-size: 2.7rem;
+            margin-top: 0;
+            margin-bottom: 20px;
         }
-        
-        #about-dynamic{
-            width: 90vw;
-            height: 450px;
-            background-color: white;
-            padding: 5%;
-        
-        h1{
-        font-family: 'PhosphateInline';
-        text-align: center;
-        font-size: 2rem;
-        letter-spacing: 0.8vw;
-        font-weight: 400;
-        margin-bottom: 3vh;
-         span{font-size: 5rem;}}
-        h2,h3{
-            font-family: 'Share Tech Mono', monospace;
-            font-size:1.5rem; letter-spacing: 2px; text-align: center; padding: 1.5%;}
-            p{font-family: 'Share Tech Mono', monospace;
-            padding: 1%; font-size: 1.2rem; letter-spacing: 1.5px; text-align: center;}
-        
-        //dynamic h2 h3 do styling !!!!!!!!!!!!!!!!!!!
-        
-        
-        .skill{
-        width: 60vw;
-        height: 200px;
-        margin-top: 3vh;
-        margin-left: 5vw;
-        display:flex;
-        flex-direction: row;
-        
-        img{width: 30vw; height: 30vh; margin: 9%;}
-        
-        .etc{
-        width: 30vw;
-        margin-top:8vh;
-        text-align: center;
-         li{ font-family: 'Share Tech Mono', monospace;
-            font-size: 1rem; margin: 3%;
-            color: #515151;
-            list-style: none;
-             span{font-size: 1rem; font-weight: 500; letter-spacing: 5px; color: black;}} //li
-        }//etc
-        
-        }}} //about
-    
-        #work{
-            width: 100vw;
-            height: 300px;
-            margin-top: 500px;
+
+        #img-here{
+            width:450px;
             
+        }
+
+        .black-g{
+            height: 370px;
+
+            .workData{
+                font-size: 1.2em;
+            }
             
-            background-color:#f2f2f2;
-            flex-direction: column;
-        
-            
-            .white-forT
-            {display: none;
-            
-            #img-here{
-             display:none;
-            
-            .img-cont{
-                display:none} }}
-            
-                .black-g
-                {
-                width: 100vw;
-                height: 300px;
-              //   top: 10vh;
-                display:flex;
-                flex-direction: column;
-                background-color: black;
-                
-                .workData{
-                color:white;
-                width: 100vw;
-                font-size: 1.5rem;
-                margin-top: 4vh;
-                margin-left: 34vw;
-                padding: 2%;
-                
-                &:hover{cursor: pointer;}}}
-              }//work
-              #video{
-                width: 100vw;
-                height: 100vh;
-                position: relative;
-                top: 10vh;
-                background-color:white;
-                justify-content: center;
-            
-              video{width: 85vw; margin: 5vw;}
-            
+        }
+
+            }//work
+
+            #design-cont{
+                height:400px;
+            }
+
+            #other-work{
+
+                #flex-box{
+                    width: 100vw;
+                    display:flex;
+                    flex-direction: row;
+                }
+                .etc-work{
+                    width:90vw;
+                }
+
+
+            }
+
+            .popover{
+                top: 340vh;
+
+                .workImg{
+                    img{
+                        width:100vw;
+                       
                     }
+                }
+            }
+
+
+            .contact-btn{
+                margin-left:38vw;
+            }
+    }
+
     
-                    .popover { 
-                        display: none;
-                        position: absolute;
-                        background-color:rgba(71,70,70,0.8);
-                        width:90vw;
-                        left: 3vw;
-                        height: 510px;
-                        top: 275vh;
-                        z-index: 999;
-                        border-radius: 8px;
-                        padding: 4px;
-                    
-                    
-                        h2 {font-size: 2rem; font-weight: 300; 
-                            margin-top: 35px;
-                            text-align: center;
-                            font-family: 'Share Tech Mono', monospace;
-                            color: seashell; margin-bottom: 10px;}
-                        
-                        h3,p{
-                        padding: 2%;
-                        text-align: center;
-                        font-family: 'Share Tech Mono', monospace;
-                        font-size: 1.5rem;
-                        margin-bottom: 10px;
-                        color: seashell;
-                        }
-                    
-                        .close-btn{ background: none;
-                                    float:right;
-                                    border:none; font-size:50px;
-                                    font-family: 'Share Tech Mono', monospace; }
-                    
-                        .workImg img { width: 250px; height: 150px;}
-                    
-                        .link{
-                            img{width: 50px; padding: 3%;}}
-                                                    } //lightbox
-                     
-                      .show-popover { 
-                         display: block;
-                           text-align: center;}
-                           #form {
-                            display:none;
-                            width: 100vw;
-                            height: 700px;
-                            margin: 0 auto;
-                            text-align: center;
-                            background-color: #161616;
-                            position: absolute;
-                            top: 50vh;
-                            z-index: 1;
-                            border-radius: 2px;
-                            
-                            h2{font-family:"PhosphateInline"; font-size:2rem; color: white; margin: 40px; text-align: center;}
-                    
-                            input {
-                                width: 70vw;
-                                height: 30px;
-                                margin-top: 40px;
-                                padding: 5px;
-                                border: solid ;
-                                font-size: 1.25em;}
-                        
-                            textarea {
-                                width: 70vw;
-                                height: 160px;
-                                margin-top: 30px;
-                                padding: 5px;
-                                border: solid 3px;
-                                font-size: 1.25em;}
-                        
-                            .submit-btn{
-                                width: 50vw;
-                                height: 45px;
-                                border: none;
-                                background-color: #161616;
-                                color: whitesmoke;
-                                font-size: 1.2em;
-                                margin-top: 30px;
-                                transition: .3s;
-                                &:hover{
-                                  transform: scale(1.01);
-                                  background-color: violet;
-                                  cursor: pointer;
-                                  }}
-                                        
-                                }  //form
-                    
-                                .show-cont { 
-                                    display: block !important; 
-                                      text-align: center;}
-                    
-                            .sendit{
-                                display:none;
-                                width: 70vw;
-                                height: 100vh;
-                                margin: 0 auto;
-                                text-align: center;
-                                background-color: #161616;
-                               background-image: url(../images/thankyou.png);
-                                position: absolute;
-                                top: 50vh;
-                                left: 10vw;
-                                z-index: 1;
-                                border-radius: 2px;
-                            
-                                h2{font-family: 'Share Tech Mono', monospace;
-                                    margin: 10%;
-                                    text-align: center;
-                                      font-size: 2rem; color:white;}
-                    
-                              h3{
-                                font-family: 'Share Tech Mono', monospace;
-                                text-align: center;
-                                font-size: 2rem; color:white}
-                            
-                                            }
-                    
-                            .sendPage{
-                            display: block !important;
-                            text-align: center;
-                            }
     }
     
     
 
 
-
-
-@media only screen and 
-(max-width : 767px) and (min-width :569px){
+    @media only screen and 
+    (min-width : 543px) and  (max-width : 720px) {
+    
     html,body{ width: 100vw;overflow-x:hidden;}
 
     main{
@@ -560,1173 +503,647 @@ main{
     overflow-x:hidden;
     padding:0;
     margin:0%;
-    }
-    
-    #about{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    
-    .black-about{
-    width: 100vw;
-    height: 100vh;
-    background-color: #161616;
-    
-    h2{font-family: "Andale Mono";
-        padding-top: 3vh;
-        padding-left: 2vw;
-        font-size: 3rem; color: white; text-align:left}
-    
-    .img-con{
-        height: 245px;
-        transform: rotate(-45deg);
-        vertical-align: middle;
-        width:245px;
-        top: 3vh;
-        left: 35vw;
-        position: relative;
-        background-image: url(../images/pro.png);
-        background-attachment: fixed !important; //it's not working in firefox. . .
-        justify-content: center;
-        z-index: 1;
-        margin-bottom: 15vh;
-        }
-    marquee{
-    display:none;}
-    }
-    
-    #about-dynamic{
-        width: 90vw;
-        background-color: white;
-        padding: 5%;
-    
-    h1{
-    font-family: 'PhosphateInline';
-    text-align: center;
-    font-size: 2rem;
-    letter-spacing: 0.8vw;
-    font-weight: 400;
-    margin-bottom: 3vh;
-     span{font-size: 5rem;}}
-    h2,h3{
-        font-family: 'Share Tech Mono', monospace;
-        font-size:1.5rem; letter-spacing: 2px; text-align: center; padding: 1.5%;}
-        p{font-family: 'Share Tech Mono', monospace;
-        padding: 1%; font-size: 1.2rem; letter-spacing: 1.5px; text-align: center;}
-    
-    //dynamic h2 h3 do styling !!!!!!!!!!!!!!!!!!!
-    
-    
-    .skill{
-    width: 60vw;
-    height: 200px;
-    margin-top: 4vh;
-    margin-left: 15vw;
-    display:flex;
-    flex-direction: row;
-    
-    img{width: 25vw; height: 20vh; margin: 9%;}
-    
-    .etc{
-    width: 45vw;
-    margin-top:4vh;
-    text-align: center;
-     li{ font-family: 'Share Tech Mono', monospace;
-        font-size: 1rem; margin: 3%;
-        color: #515151;
-        list-style: none;
-         span{font-size: 1.2rem; font-weight: 500; letter-spacing: 5px; color: black;}} //li
-    }//etc
-    
-    }}} //about
 
-    #work{
-        width: 100vw;
-        height: 40vh;
-        position: relative;
-        top: 50vh;
-        background-color:#f2f2f2;
-        flex-direction: column;
-    
-        
-        .white-forT
-        {display: none;
-        
-        #img-here{
-         display:none;
-        
-        .img-cont{
-            display:none} }}
-        
-            .black-g
-            {
-            width: 100vw;
-            height: 40vh;
-          //   top: 10vh;
-            display:flex;
-            flex-direction: column;
-            background-color: black;
-            
-            .workData{
-            color:white;
-            width: 100vw;
-            font-size: 1.5rem;
-            margin-top: 2vh;
-            text-align:center;
-            padding: 2%;
-            
-            &:hover{cursor: pointer;}}}
-          }//work
-          #video{
-            width: 100vw;
-            height: 100vh;
-            position: relative;
-            top: 50vh;
-            background-color:white;
-            
-        
-          video{ width: 90vw; margin: 5vw;}
-        
+
+        #about{
+                #intro-cont{
+                    #intro{font-size:2em;}
+
+                    #onEp,#twOp{font-size: 1.3em;}
+
+                    .resume{margin-left: 40vw;}
+
                 }
 
-                .popover { 
-                    display: none;
-                    position: absolute;
-                    background-color:rgba(71,70,70,0.8);
-                    width:95vw;
-                    left: 1vw;
-                    height: 600px;
-                    
-                    top: 205vh;
-                    z-index: 999;
-                    border-radius: 8px;
-                    padding: 4px;
+            .skill-set{
+                h3{font-size:2em;}
+                img{width: 60px; 
+                    height: 60px; 
+                    padding: 30px;
+                    margin-left: -4vw;}
+
+            }
+
+        }//about
+
+        #work{
+            width:100vw;
+            display:flex;
+            flex-direction: row;
+            background-color: black;
+            padding-top:27px;
+
+        h2{font-size: 3rem; text-align: center; display: none;}
+
+     
+
+        #img-here{
+            
+            width:450px;
+            position: static;
+           
+        }
+     
+            .black-g{
+               margin-top:0;
+                width: 30%;
+                height:375px;
+                display: flex;
+                background-color: black;
+                flex-direction: column;
                 
-                
-                    h2 {font-size: 2.5rem; font-weight: 300;
-                        margin-top: 20px;
-                        font-family: 'Share Tech Mono', monospace;
-                        color: seashell; margin-bottom: 10px;}
-                    
-                    h3,p{
-                    padding: 2%;
-                    margin-bottom: 10px;
-                    font-family: 'Share Tech Mono', monospace;
-                    font-size: 1.5rem;
-                    color: seashell;
-                    }
-                
-                    .close-btn{ background: none;
-                                margin-left: 90vw;
-                                border:none; font-size:50px;
-                                font-family: 'Share Tech Mono', monospace; }
-                
-                    .workImg img { width: 250px; height: 150px;}
-                
-                    .link{
-                        img{width: 50px; padding: 3%;}}
-                                                } //lightbox
-                 
-                  .show-popover { 
-                     display: block;
-                       text-align: center;}
-                       #form {
-                        display:none;
-                        width: 70vw;
-                        height: 700px;
-                        margin: 0 auto;
-                        text-align: center;
-                        background-color: #161616;
-                        position: absolute;
-                        top: 50vh;
-                        left: 10vw;
-                        z-index: 1;
-                        border-radius: 2px;
-                        
-                        h2{font-family:"PhosphateInline"; font-size:2rem; color: white; margin: 40px; text-align: center;}
-                
-                        input {
-                            width: 50vw;
-                            height: 30px;
-                            margin-top: 40px;
-                            padding: 5px;
-                            border: solid ;
-                            font-size: 1.25em;}
-                    
-                        textarea {
-                            width: 50vw;
-                            height: 160px;
-                            margin-top: 30px;
-                            padding: 5px;
-                            border: solid 3px;
-                            font-size: 1.25em;}
-                    
-                        .submit-btn{
-                            width: 50vw;
-                            height: 45px;
-                            border: none;
-                            background-color: #161616;
-                            color: whitesmoke;
-                            font-size: 1.2em;
-                            margin-top: 30px;
-                            transition: .3s;
-                            &:hover{
-                              transform: scale(1.01);
-                              background-color: violet;
-                              cursor: pointer;
-                              }}
-                                    
-                            }  //form
-                
-                            .show-cont { 
-                                display: block !important; 
-                                  text-align: center;}
-                
-                        .sendit{
-                            display:none;
-                            width: 70vw;
-                            height: 100vh;
-                            margin: 0 auto;
-                            text-align: center;
-                            background-color: #161616;
-                           background-image: url(../images/thankyou.png);
-                            position: absolute;
-                            top: 50vh;
-                            left: 10vw;
-                            z-index: 1;
-                            border-radius: 2px;
-                        
-                            h2{font-family: 'Share Tech Mono', monospace;
-                                margin: 10%;
-                                text-align: center;
-                                  font-size: 2rem; color:white;}
-                
-                          h3{
-                            font-family: 'Share Tech Mono', monospace;
-                            text-align: center;
-                            font-size: 2rem; color:white}
-                        
-                                        }
-                
-                        .sendPage{
-                        display: block !important;
-                        text-align: center;
-                        }
+
+                .workData{
+                    margin-top: 50px;
+                    margin-left:5vw;
+                }
+               
+            }
+
+        }
+
+        #design-cont{height: 550px;}
+
+        #other-work{
+
+            #flex-box{
+                display:flex;
+                flex-flow: row;
+
+            }
+        }
+
+    }//other work..
+    .contact-btn{
+        width: 130px;
+        margin-left:37vw;
+    }
+
 }
-
-
-
-
 
 //Tablet....
 @media only screen and 
-(max-width : 1023px) and (min-width : 768px){
-html,body{ width: 100vw;overflow-x:hidden;}
+(min-width : 721px) and  (max-width : 1023px) {
+    html,body{ width: 100vw;overflow-x:hidden;}
 
     main{
     width: 100vw;
     overflow-x:hidden;
     padding:0;
     margin:0%;
-    }
-    
-    
-    
-    #about{
-    width: 100vw;
-    height: 700px;
-    display: flex;
-    flex-direction: column;
-    
-    .black-about{
-    width: 100vw;
-    height: 400px;
-    background-color: #161616;
-    
-    h2{font-family: "Andale Mono";
-        padding-top: 3vh;
-        padding-left: 2vw;
-        font-size: 3rem; color: white; text-align:left}
-    
-    .img-con{
-        height: 245px;
-        transform: rotate(-45deg);
-        vertical-align: middle;
-        width:245px;
-        top: 2vh;
-        left: 35vw;
-        position: relative;
-        background-image: url(../images/pro.png);
-        background-attachment: fixed !important; //it's not working in firefox. . .
-        justify-content: center;
-        z-index: 1;
-        margin-bottom: 15vh;
-        }
-      
-    
-    
-    marquee{
-    display:none;}
-          
-    
-    }
-    
-    #about-dynamic{
-        width: 90vw;
-       
-        height: 450px;
-    background-color: white;
-    padding: 5%;
-    
-    h1{
-    font-family: 'PhosphateInline';
-    text-align: center;
-    font-size: 2rem;
-    letter-spacing: 0.8vw;
-    font-weight: 400;
-    margin-bottom: 3vh;
-     span{font-size: 5rem;}}
-    h2,h3{
-        font-family: 'Share Tech Mono', monospace;
-        font-size:1.5rem; letter-spacing: 2px; text-align: center; padding: 1.5%;}
-        p{font-family: 'Share Tech Mono', monospace;
-        padding: 1%; font-size: 1.2rem; letter-spacing: 1.5px; text-align: center;}
-    
-    //dynamic h2 h3 do styling !!!!!!!!!!!!!!!!!!!
-    
-    
-    .skill{
-    width: 60vw;
-    height: 200px;
-    margin-top: 5vh;
-    margin-left: 15vw;
-    display:flex;
-    flex-direction: row;
-    
-    img{width: 25vw; height: 20vh; margin: 5%;}
-    
-    .etc{
-    width: 45vw;
-    margin-top:4vh;
-    text-align: center;
-     li{ font-family: 'Share Tech Mono', monospace;
-        font-size: 1rem; margin: 3%;
-        color: #515151;
-        list-style: none;
-         span{font-size: 1.2rem; font-weight: 500; letter-spacing: 5px; color: black;}} //li
-    }//etc
-    
-    }}} //about
 
-    #work{
-        width: 100vw;
-        height: 600px;
-        position: relative;
-        margin-top: 400px;
-        background-color:#f2f2f2;
-        flex-direction: column;
-    
-        
-        .white-forT
-        {width: 90vw;
-        height: 400px;
-        margin:0 auto;
-        top: 4vh;
-        position: relative;
-    //    border: solid orange 2px;
-        justify-content: center;
-        background-color: white;
-        
-        #img-here{
-          width: 450px;
-          height: 330px;
-          position: absolute;
-          z-index: 1;
-          top: 2vh;
-          left: 20vw;
-          overflow:hidden;
-        
-        .img-cont{
-            position:relative; width:1800px; transition: all .5s;
-            img{width: 450px; float:left;} }
-        
-        }}
-      //images. . . .. . .
-        
-    
-      .black-g
-      {
-      width: 100vw;
-      height: 200px;
-       
-      display:flex;
-      flex-direction: row;
-      background-color: black;
-      
-      .workData{
-      color:white;
-      width: 100vw;
-      font-size: 1.5rem;
-      margin-top: 50px;
-      padding: 3%;
-      
-      &:hover{cursor: pointer;}}}
-    }//work
-  
-    #video{
-        width: 100vw;
-        height: 100vh;
-        position: relative;
-        top: 5vh;
-        background-color:white;
-    
-      video{ width: 90vw; margin: 5vw;}
-    
+
+        #about{
+
+            .black-about{
+                height: 450px;
+
+                .img-con{
+
+                    width: 260px;
+                    height:260px;
+                }
+
+
             }
-    
-    
-    
+
+                #intro-cont{
+                    #intro{font-size:2.2em;}
+
+                    #onEp,#twOp{font-size: 1.3em;
+                    line-height: 35px;}
+
+                    .resume{margin-left: 43vw;}
+
+                }
+
+            .skill-set{
+                
+                h3{font-size:2.2em;}
+                img{width: 65px; 
+                    height: 65px; 
+                    padding: 40px;
+                    }
+
+            }
+
+        }//about
+
+        #work{
+            width:100vw;
+            margin-top: 715px;
+            display:flex;
+            flex-direction: row;
+            background-color: black;
+            padding-top:75px;
+
+        h2{font-size: 3rem; text-align: center; display: none;}
+
+     
+
+        #img-here{
+            
+            width:450px;
+            position: static;
+           
+        }
+     
+            .black-g{
+               margin-top:0;
+                width: 30%;
+                height:375px;
+                display: flex;
+                background-color: black;
+                flex-direction: column;
+                
+
+                .workData{
+                    font-size: 1.3em;
+                    margin-top: 50px;
+                    margin-left:18vw;
+                }
+               
+            }
+
+        }
+
+        #design-cont{height: 550px;}
+
+        #other-work{
+
+            #flex-box{
+                display:flex;
+                flex-flow: row;
+
+            }
+        }
+
+    }//other work..
+    .contact-btn{
+        width: 130px;
+        margin-left:43vw;
+    }
+
     .popover { 
         display: none;
         position: absolute;
-        background-color:rgba(71,70,70,0.8);
-        width:90vw;
-        left: 3vw;
-        height: 80vh;
-        top: 250vh;
+        background-color:rgba(22,22,22,0.97);
+        width:100vw;
+        left: 0vw;
+        top: 350vh;
+        height: 330vh;
+        // top: 265vh;
         z-index: 999;
         border-radius: 8px;
         padding: 4px;
     
     
         h2 {font-size: 2.5rem; font-weight: 300; 
-            font-family: 'Share Tech Mono', monospace;
-            color: seashell; margin-bottom: 10px;}
+            
+            margin-top: 105px;
+            
+            font-family: $o-font;
+            color: seashell; margin-bottom: 100px;}
         
-        h3,p{
-        padding: 2%;
-        font-family: 'Share Tech Mono', monospace;
-        font-size: 1.5rem;
+        h3{font-family: $o-font;
+            font-size: 1.5em;  
+            margin-bottom: 30px;
+            width: 90vw;
+            padding: 1.5%;
+            color: seashell;
+            
+        }
+        
+        .text,.text-2{
+        width: 90vw;
+        padding: 1.5%;
+        font-family: $o-font;
+        font-size: 1.2em;
+        line-height: 65px;
         color: seashell;
+
         }
     
         .close-btn{ background: none;
                     float:right;
-                    border:none; font-size:50px;
-                    font-family: 'Share Tech Mono', monospace; }
+                    margin-right: 15px;
+                    cursor: pointer;
+                    border:none; 
+                    font-size:40px;
+                    color:seashell;}
     
-        .workImg img { width: 250px; height: 150px;}
+        .workImg img { 
+            width: 75%; 
+            margin-top: 100px;
+            margin-left:0vw;}
     
         .link{
-            img{width: 50px; padding: 3%;}}
+                margin-top: 120px;
+                text-align: center;
+            img{width: 55px; padding: 5%; margin-left:-7%}}
                                     } //lightbox
      
       .show-popover { 
-         display: block;
+         display: block !important;
            text-align: center;}
-      
-    
-           #form {
-            display:none;
-            width: 70vw;
-            height: 700px;
-            margin: 0 auto;
-            text-align: center;
-            background-color: #161616;
-            position: absolute;
-            top: 50vh;
-            left: 10vw;
-            z-index: 1;
-            border-radius: 2px;
-            
-            h2{font-family:"PhosphateInline"; font-size:2rem; color: white; margin: 40px; text-align: center;}
-    
-            input {
-                width: 50vw;
-                height: 30px;
-                margin-top: 40px;
-                padding: 5px;
-                border: solid ;
-                font-size: 1.25em;}
-        
-            textarea {
-                width: 50vw;
-                height: 160px;
-                margin-top: 30px;
-                padding: 5px;
-                border: solid 3px;
-                font-size: 1.25em;}
-        
-            .submit-btn{
-                width: 50vw;
-                height: 45px;
-                border: none;
-                background-color: #161616;
-                color: whitesmoke;
-                font-size: 1.2em;
-                margin-top: 30px;
-                transition: .3s;
-                &:hover{
-                  transform: scale(1.01);
-                  background-color: violet;
-                  cursor: pointer;
-                  }}
-                        
-                }  //form
-    
-                .show-cont { 
-                    display: block !important; 
-                      text-align: center;}
-    
-            .sendit{
-                display:none;
-                width: 70vw;
-                height: 100vh;
-                margin: 0 auto;
-                text-align: center;
-                background-color: #161616;
-               background-image: url(../images/thankyou.png);
-                position: absolute;
-                top: 50vh;
-                left: 10vw;
-                z-index: 1;
-                border-radius: 2px;
-            
-                h2{font-family: 'Share Tech Mono', monospace;
-                    margin: 10%;
-                    text-align: center;
-                      font-size: 2rem; color:white;}
-    
-              h3{
-                font-family: 'Share Tech Mono', monospace;
-                text-align: center;
-                font-size: 2rem; color:white}
-            
-                            }
-    
-            .sendPage{
-            display: block !important;
-            text-align: center;
-            }
+
+
+
         }
     
-
-
-
-
-
-
 
 
 
 
 ////////laptop    
+
 @media only screen and
-(max-width: 1280px) and (min-width: 1024px){
-    html,body{ width: 100vw;overflow-x:hidden;}
+(min-width: 1024px) and (max-width: 1281px){
+  
+    main{
+        width: 100vw;
+        overflow-x:hidden;
+        padding:0;
+        margin:0%;
+    
+    
+            #about{
+    
+                .black-about{
+                    height: 350px;
+                    margin-bottom: 400px;
+                    .img-con{
+                        height: 380px;
+                        transform: rotate(-45deg);
+                        vertical-align: middle;
+                        width:380px;
+                       
+                       
+                        position: relative;
+                        background-image: url(../images/pro.png);
+                        background-attachment: fixed !important; //it's not working in firefox. . .
+                        background-size: cover;
+                        // justify-content: center;
+                        z-index: 1;
+                       }
+    
+    
+                }
+    
+                    #intro-cont{
+                        #intro{font-size:2.5em;}
+    
+                        #onEp,#twOp{
+                            width: 65vw;
+                            text-align: center;
+                        font-size: 1.3em;
+                        line-height: 45px;}
+    
+                        .resume{margin-left: 45vw;}
+    
+                    }
+    
+                .skill-set{
+                    
+                    h3{font-size:2.5em;}
+                    img{width: 65px; 
+                        height: 65px; 
+                        
+                        padding: 60px;
+                        }
+    
+                }
+    
+            }//about
+    
+            #work{
+                width:100vw;
+                margin-top: 1315px;
+                display:flex;
+                flex-direction: row;
+                background-color: black;
+                padding-top:75px;
+    
+            h2{font-size: 3rem; text-align: center; display: none;}
+    
+         
+    
+            #img-here{
+                margin-left: 75px;
+                width:450px;
+                position: static;
+               
+            }
+         
+                .black-g{
+                   margin-top:0;
+                    width: 30%;
+                    height:375px;
+                    display: flex;
+                    background-color: black;
+                    flex-direction: column;
+                    
+    
+                    .workData{
+                        font-size: 2em;
+                        padding: 10px;
+                        margin-top: 40px;
+                        margin-left:25vw;
+                    }
+                   
+                }
+    
+            }
+    
+            #design-cont{height: 550px;}
+    
+            #other-work{
+                
+                   padding-left: 3%;
+
+                #flex-box{
+                    
+                    .etc-work{
+                        width: 30vw;
+                        
+
+                        img{
+                            width: 25vw;
+                            padding: 10%;
+                        }
+                    }
+                }
+            }
+    
+        }//other work..
+        .contact-btn{
+            width: 130px;
+            margin-left:45vw;
+        }
+    
+        .popover { 
+            display: none;
+            position: absolute;
+            background-color:rgba(22,22,22,0.90);
+            width:99vw;
+            left: 0vw;
+            top: 420vh;
+            height: 350vh;
+            // top: 265vh;
+            z-index: 999;
+            // border-radius: 8px;
+            padding: 4px;
+        
+        
+            h2 {font-size: 3rem; font-weight: 300; 
+                
+                margin-top: 105px;
+                
+                font-family: $o-font;
+                color: seashell; margin-bottom: 100px;}
+            
+            h3{font-family: $o-font;
+                font-size: 1.5em;  
+                margin-bottom: 30px;
+                width: 90vw;
+                padding: 1.5%;
+                color: seashell;
+                
+            }
+            
+            .text,.text-2{
+            width: 90vw;
+            padding: 1.5%;
+            font-family: $o-font;
+            font-size: 1.2em;
+            line-height: 65px;
+            color: seashell;
+    
+            }
+        
+            .close-btn{ background: none;
+                        float:right;
+                        margin-right: 15px;
+                        cursor: pointer;
+                        border:none; 
+                        font-size:40px;
+                        color:seashell;}
+        
+            .workImg img { 
+                width: 55%; 
+                margin-top: 100px;
+                margin-left:0vw;}
+        
+            .link{
+                    margin-top: 120px;
+                    text-align: center;
+                img{width: 55px; padding: 5%; margin-left:-7%}}
+                                        } //lightbox
+         
+          .show-popover { 
+             display: block !important;
+               text-align: center;}
+   
+    
+
+              
+    
+    
+    }
+
+
+
+
+
+
+
+//Big desktop
+@media only screen and
+(min-width: 1282px){
 
     main{
-    width: 100vw;
-    overflow-x:hidden;
-    padding:0;
-    margin:0%;
-    }
+        width: 100vw;
+        overflow-x:hidden;
+        padding:0;
+        margin:0%;
     
     
+            #about{
     
-    #about{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    
-    .black-about{
-    width: 50vw;
-    background-color: #161616;
-    
-    h2{font-family: "Andale Mono";
-        padding-top: 3vh;
-        padding-left: 2vw;
-        font-size: 3rem; color: white; text-align:left}
-    
-    
-    
-    .img-con{
-        height: 235px;
-        transform: rotate(-45deg);
-        vertical-align: middle;
-        width:235px;
-        top: 17vh;
-        left: 13vw;
-        position: relative;
-        background-image: url(../images/pro.png);
-        background-attachment: fixed !important; //it's not working in firefox. . .
-        justify-content: center;
-        z-index: 1;
-        }
-      
+                .black-about{
+                    height: 350px;
+                    margin-bottom: 400px;
+                    .img-con{
+                        height: 380px;
+                        transform: rotate(-45deg);
+                        vertical-align: middle;
+                        width:380px;
+                       
+                       
+                        position: relative;
+                        background-image: url(../images/pro.png);
+                        background-attachment: fixed !important; //it's not working in firefox. . .
+                        background-size: cover;
+                        // justify-content: center;
+                        z-index: 1;
+                       }
     
     
-    marquee{
-        width: 30vw; height: 30vh;
-        color: rgba(214,211,211,0.6);
-        top: -5vh;
-        left: 0vw;
-        font-size: 2rem;
-        position: relative;}
-          
+                }
     
-    }
+                    #intro-cont{
+                        #intro{font-size:2.5em;}
     
-    #about-dynamic{
-        width: 50vw;
-    background-color: white;
-    padding: 3%;
+                        #onEp,#twOp{
+                            width: 65vw;
+                            text-align: center;
+                        font-size: 1.3em;
+                        line-height: 45px;}
     
-    h1{
-    font-family: 'PhosphateInline';
-    text-align: center;
-    font-size: 2rem;
-    letter-spacing: 0.8vw;
-    font-weight: 400;
-    margin-bottom: 3vh;
-     span{font-size: 5rem;}}
-    h2,h3{
-        font-family: 'Share Tech Mono', monospace;
-        font-size:1.5rem; letter-spacing: 2px; text-align: center; padding: 1.5%;}
-        p{font-family: 'Share Tech Mono', monospace;
-        padding: 1%; font-size: 1.2rem; letter-spacing: 1.5px; text-align: center;}
+                        .resume{margin-left: 45vw;}
     
-    //dynamic h2 h3 do styling !!!!!!!!!!!!!!!!!!!
+                    }
     
-    
-    .skill{
-    width: 50vw;
-    height: 200px;
-    margin-top: 7vh;
-    display:flex;
-    flex-direction: row;
-    
-    
-    
-    img{width: 25vw; height: 20vh; margin: 5%;}
-    
-    .etc{
-    width: 50vw;
-    margin-top:4vh;
-    text-align: center;
-     li{ font-family: 'Share Tech Mono', monospace;
-        font-size: 1rem; margin: 3%;
-        color: #515151;
-        list-style: none;
-         span{font-size: 1.2rem; font-weight: 500; letter-spacing: 5px; color: black;}} //li
-    }//etc
-    
-    }}} //about
-     
-    //do portfolio
-
-#work{
-    width: 100vw;
-    height: 80vh;
-    display: flex;
-    overflow-x:hidden;
-    background-color:#f2f2f2;
-    flex-direction: row;
-
-    
-    .white-g
-    {width: 43vw;
-    height: 80vh;
-    background-color: white;}
-    
-    
-    #img-here{
-      width: 450px;
-      height: 330px;
-      position: absolute;
-      z-index: 1;
-      top: 220vh;
-      left: 10vw;
-      margin:0 auto;
-      overflow:hidden;
-    
-    .img-cont{
-        position:relative; width:1800px; transition: all .5s;
-        img{width: 450px; float:left;} }
-     }
-  //WORK PORTFOLIO DONE
-    
-
-    .black-g
-    {
-    width: 57vw;
-    height: 80vh;
-    display:flex;
-    flex-direction: column;
-    // position: relative;
-    
-    background-color: black;
-    
-    .workData{
-    color:white;
-    width: 20vw;
-    // display:flex;
-    // flex-direction: column;
-    font-size: 2rem;
-    // margin-top:1vh;
-    margin-left: 14vw;
-    margin-top: 2vh;
-    padding: 5%;
-    
-    &:hover{cursor: pointer;}}
-}}//work
-
-#video{
-    width: 100vw;
-    height: 100vh;
-    background-color:white;
-
-  video{ width: 90vw; margin: 5vw;}
-
-        }
-
-
-
-.popover { 
-    display: none;
-    position: absolute;
-    background-color:rgba(71,70,70,0.8);
-    width:95vw;
-    left: 3vw;
-    height: 100vh;
-    top: 200vh;
-    z-index: 999;
-    border-radius: 8px;
-    padding: 4px;
-
-
-    h2 {font-size: 2.5rem; font-weight: 300; 
-        font-family: 'Share Tech Mono', monospace;
-        color: seashell; margin-bottom: 10px;}
-    
-    h3,p{
-    padding: 2%;
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 1.5rem;
-    color: seashell;
-    }
-
-    .close-btn{ background: none;
-                float:right;
-                border:none; font-size:50px;
-                font-family: 'Share Tech Mono', monospace; }
-
-    .workImg img { width: 250px; height: 150px;}
-
-    .link{
-        img{width: 50px; padding: 3%;}}
-                                } //lightbox
- 
-  .show-popover { 
-     display: block;
-       text-align: center;}
-  
-
-       #form {
-        display:none;
-        width: 70vw;
-        height: 100vh;
-        margin: 0 auto;
-        text-align: center;
-        background-color: #161616;
-        position: absolute;
-        top: 50vh;
-        left: 10vw;
-        z-index: 1;
-        border-radius: 2px;
-        
-        h2{font-family:"PhosphateInline"; font-size:2rem; color: white; margin: 40px; text-align: center;}
-
-        input {
-            width: 50vw;
-            height: 30px;
-            margin-top: 40px;
-            padding: 5px;
-            border: solid ;
-            font-size: 1.25em;}
-    
-        textarea {
-            width: 50vw;
-            height: 160px;
-            margin-top: 30px;
-            padding: 5px;
-            border: solid 3px;
-            font-size: 1.25em;}
-    
-        .submit-btn{
-            width: 50vw;
-            height: 45px;
-            border: none;
-            background-color: #161616;
-            color: whitesmoke;
-            font-size: 1.2em;
-            margin-top: 30px;
-            transition: .3s;
-            &:hover{
-              transform: scale(1.01);
-              background-color: violet;
-              cursor: pointer;
-              }}
+                .skill-set{
                     
-            }  //form
-
-            .show-cont { 
-                display: block !important; 
-                  text-align: center;}
-
-        .sendit{
-            display:none;
-            width: 70vw;
-            height: 100vh;
-            margin: 0 auto;
-            text-align: center;
-            background-color: #161616;
-           background-image: url(../images/thankyou.png);
-            position: absolute;
-            top: 50vh;
-            left: 10vw;
-            z-index: 1;
-            border-radius: 2px;
-        
-            h2{font-family: 'Share Tech Mono', monospace;
-                margin: 10%;
-                text-align: center;
-                  font-size: 2rem; color:white;}
-
-          h3{
-            font-family: 'Share Tech Mono', monospace;
-            text-align: center;
-            font-size: 2rem; color:white}
-        
+                    h3{font-size:2.5em;}
+                    img{width: 65px; 
+                        height: 65px; 
+                        
+                        padding: 60px;
                         }
-
-        .sendPage{
-        display: block !important;
-        text-align: center;
-        }
-    }
-
-
-
-
-
-
-
-// Big desktop
-@media only screen and
- (min-width: 1280px){
- 
-
-html,body{ width: 100vw;overflow-x:hidden;}
-
-main{
-width: 100vw;
-overflow-x:hidden;
-padding:0;
-margin:0%;
-}
-
-
-
-#about{
-width: 100vw;
-height: 100vh;
-display: flex;
-flex-direction: row;
-
-.black-about{
-width: 50vw;
-background-color: #161616;
-
-h2{font-family: "Andale Mono";
-    padding-top: 3vh;
-    padding-left: 2vw;
-    font-size: 3rem; color: white; text-align:left}
-
-
-
-.img-con{
-    height: 235px;
-    transform: rotate(-45deg);
-    vertical-align: middle;
-    width:235px;
-    top: 17vh;
-    left: 13vw;
-    position: relative;
-    background-image: url(../images/pro.png);
-    background-attachment: fixed !important; //it's not working in firefox. . .
-    justify-content: center;
-    z-index: 1;
-    }
-  
-
-
-marquee{
-    width: 30vw; height: 30vh;
-    color: rgba(214,211,211,0.6);
-    top: -5vh;
-    left: 0vw;
-    font-size: 2rem;
-    position: relative;}
-      
-
-}
-
-#about-dynamic{
-    width: 50vw;
-background-color: white;
-padding: 3%;
-
-h1{
-font-family: 'PhosphateInline';
-text-align: center;
-font-size: 2rem;
-letter-spacing: 0.8vw;
-font-weight: 400;
-margin-bottom: 3vh;
- span{font-size: 5rem;}}
-h2,h3{
-    font-family: 'Share Tech Mono', monospace;
-    font-size:1.5rem; letter-spacing: 2px; text-align: center; padding: 1.5%;}
-    p{font-family: 'Share Tech Mono', monospace;
-    padding: 1%; font-size: 1.3rem; letter-spacing: 1.5px; text-align: center;}
-
-//dynamic h2 h3 do styling !!!!!!!!!!!!!!!!!!!
-
-
-.skill{
-width: 50vw;
-height: 200px;
-margin-top: 7vh;
-display:flex;
-flex-direction: row;
-
-
-
-img{width: 30vw; height: 25vh; margin: 5%;}
-
-.etc{
-width: 50vw;
-margin-top:7vh;
-text-align: center;
- li{ font-family: 'Share Tech Mono', monospace;
-    font-size: 1rem; margin: 3%;
-    color: #515151;
-    list-style: none;
-     span{font-size: 1.2rem; font-weight: 500; letter-spacing: 5px; color: black;}} //li
-}//etc
-
-}
-
-}}
-
-//do portfolio
-
-#work{
-    width: 100vw;
-    height: 80vh;
-    display: flex;
-    overflow-x:hidden;
-    background-color:#f2f2f2;
-    flex-direction: row;
-
     
-    .white-g
-    {width: 43vw;
-    height: 80vh;
-    background-color: white;}
+                }
     
-    #img-here{
-      width: 450px;
-      height: 330px;
-      position: absolute;
-      z-index: 1;
-      top: 220vh;
-      left: 15vw;
-      margin:0 auto;
-      overflow:hidden;
+            }//about
     
-    .img-cont{
-        position:relative; width:1800px; transition: all .5s;
-        img{width: 450px; float:left;} }
+            #work{
+                width:100vw;
+                margin-top: 1315px;
+                display:flex;
+                flex-direction: row;
+                background-color: black;
+                padding-top:75px;
     
-    }
-  //WORK PORTFOLIO DONE
+            h2{font-size: 3rem; text-align: center; display: none;}
     
-
-    .black-g
-    {
-    width: 57vw;
-    height: 80vh;
-    display:flex;
-    flex-direction: column;
-    // position: relative;
-    
-    background-color: black;
-    
-    .workData{
-    color:white;
-    width: 20vw;
-    // display:flex;
-    // flex-direction: column;
-    font-size: 2rem;
-    // margin-top:1vh;
-    margin-left: 14vw;
-    margin-top: 3vh;
-    padding: 5%;
-    
-    &:hover{cursor: pointer;}
-    }
-    }
-}
-
-#video{
-    width: 100vw;
-    height: 100vh;
-    background-color:white;
-    margin-bottom: 5vh;
-
-  video{ width: 90vw; margin: 5vw;}
-
-        }
-
-
-
-.popover { 
-    display: none;
-    position: absolute;
-    background-color:rgba(71,70,70,0.8);
-    width:95vw;
-    left: 3vw;
-    height: 100vh;
-    top: 200vh;
-    z-index: 999;
-    border-radius: 8px;
-    padding: 4px;
-
-
-    h2 {font-size: 2.5rem; font-weight: 300; 
-        font-family: 'Share Tech Mono', monospace;
-        color: seashell; margin-bottom: 10px;}
-    
-    h3,p{
-    padding: 2%;
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 1.5rem;
-    color: seashell;
-    }
-
-    .close-btn{ background: none;
-                margin-left: 90vw;
-                border:none; font-size:50px;
-                font-family: 'Share Tech Mono', monospace; }
-
-    .workImg img { width: 250px; height: 150px;}
-
-    .link{
-        img{width: 50px; padding: 3%;}}
-  }
- 
-  .show-popover { 
-     display: block;
-       text-align: center;}
-
-//Contact form
-
-       #form {
-        display:none;
-        width: 70vw;
-        height: 100vh;
-        margin: 0 auto;
-        text-align: center;
-        background-color: #161616;
-        position: absolute;
-        top: 50vh;
-        left: 10vw;
-        z-index: 1;
-        border-radius: 2px;
-        
-        h2{font-family:"PhosphateInline"; font-size:2rem; color: white; margin: 40px; text-align: center;}
-
-        input {
-            width: 50vw;
-            height: 30px;
-            margin-top: 40px;
-            padding: 5px;
-            border: solid ;
-            font-size: 1.25em;}
-    
-        textarea {
-            width: 50vw;
-            height: 160px;
-            margin-top: 30px;
-            padding: 5px;
-            border: solid 3px;
-            font-size: 1.25em;}
-    
-        .submit-btn{
-            width: 50vw;
-            height: 45px;
-            border: none;
-            background-color: #161616;
-            color: whitesmoke;
-            font-size: 1.2em;
-            margin-top: 30px;
-            transition: .3s;
-            &:hover{
-              transform: scale(1.01);
-              background-color: violet;
-              cursor: pointer;
-              }}
-       }        
          
-        .show-cont { 
-            display: block !important; 
-              text-align: center;}
+    
+            #img-here{
+                margin-left: 75px;
+                width:450px;
+                position: static;
+               
+            }
+         
+                .black-g{
+                   margin-top:0;
+                    width: 30%;
+                    height:375px;
+                    display: flex;
+                    background-color: black;
+                    flex-direction: column;
+                    
+    
+                    .workData{
+                        font-size: 2em;
+                        padding: 10px;
+                        margin-top: 40px;
+                        margin-left:25vw;
+                    }
+                   
+                }
+    
+            }
+    
+            #design-cont{height: 550px;}
+    
+            #other-work{
+                
+                   padding-left: 3%;
 
+                #flex-box{
+                    
+                    .etc-work{
+                        width: 30vw;
+                        
 
-        
-
-        .sendit{
-            display:none;
-            width: 70vw;
-            height: 100vh;
-            margin: 0 auto;
-            text-align: center;
-            background-color: #161616;
-           background-image: url(../images/thankyou.png);
-            position: absolute;
-            top: 50vh;
-            left: 10vw;
-            z-index: 1;
-            border-radius: 2px;
-        
-            h2{font-family: 'Share Tech Mono', monospace;
-                margin: 10%;
-                text-align: center;
-                  font-size: 2rem; color:white;}
-
-          h3{
-            font-family: 'Share Tech Mono', monospace;
-            text-align: center;
-            font-size: 2rem; color:white}
-        
+                        img{
+                            width: 25vw;
+                            padding: 10%;
                         }
-
-        .sendPage{
-        display: block !important;
-        text-align: center;
+                    }
+                }
+            }
+    
+        }//other work..
+        .contact-btn{
+            width: 130px;
+            margin-left:45vw;
         }
- }
+    
+        .popover { 
+            display: none;
+            position: absolute;
+            background-color:rgba(22,22,22,0.90);
+            width:99vw;
+            left: 0vw;
+            top: 420vh;
+            height: 350vh;
+            // top: 265vh;
+            z-index: 999;
+            border-radius: 8px;
+            padding: 4px;
+        
+        
+            h2 {font-size: 3rem; font-weight: 300; 
+                
+                margin-top: 105px;
+                
+                font-family: $o-font;
+                color: seashell; margin-bottom: 100px;}
+            
+            h3{font-family: $o-font;
+                font-size: 1.5em;  
+                margin-bottom: 30px;
+                width: 90vw;
+                padding: 1.5%;
+                color: seashell;
+                
+            }
+            
+            .text,.text-2{
+            width: 90vw;
+            padding: 1.5%;
+            font-family: $o-font;
+            font-size: 1.2em;
+            line-height: 65px;
+            color: seashell;
+    
+            }
+        
+            .close-btn{ background: none;
+                        float:right;
+                        margin-right: 15px;
+                        cursor: pointer;
+                        border:none; 
+                        font-size:40px;
+                        color:seashell;}
+        
+            .workImg img { 
+                width: 55%; 
+                margin-top: 100px;
+                margin-left:0vw;}
+        
+            .link{
+                    margin-top: 120px;
+                    text-align: center;
+                img{width: 55px; padding: 5%; margin-left:-7%}}
+                                        } //lightbox
+         
+          .show-popover { 
+             display: block !important;
+               text-align: center;}
+
+
+}

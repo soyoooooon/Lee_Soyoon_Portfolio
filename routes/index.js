@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
   connect.getConnection((err, connection) => {
 		if (err) { return console.log(error.message); }
 
-  let query = `SELECT ID,job,feature,extra FROM tbl_bio`;
+    let query = `SELECT * FROM portfolio WHERE id="${req.params.target}"`;
 
   connect.query(query, (err, result) => {
     connection.release();
@@ -18,7 +18,7 @@ router.get('/', function(req, res, next) {
     console.log(result);
 
     
-    res.render('index', {bio: result}); 
+    res.render('index'); 
   });
   });
 });
@@ -39,22 +39,10 @@ router.get('/info/:target', (req, res) => {
   });
 });
 
+
+
 router.post('/send', (req,res) => {
-  connect.getConnection((err, connection) => {
-		if (err) { return console.log(error.message); }
-
-  let query = `SELECT ID,job,feature,extra FROM tbl_bio`;
-
-  connect.query(query, (err, result) => {
-    connection.release();
-    if (err) { return console.log(err.message);}
-    console.log(result);
-
-    
-    res.render('send', {bio: result}); 
-  });
-  });
-
+  
 
   const output = `
   <h1>You have a new message from your website!</h1>
@@ -91,7 +79,7 @@ router.post('/send', (req,res) => {
       //Else do something to show successful sent;
 
 
-    // res.render('send',{bio: result}); 
+      res.render('send'); 
        
   });
 });

@@ -3,13 +3,11 @@
   src: url("../css/PhosphateInline.woff"),
        url("../css/PhosphateInline.woff2");}
 
-       @media only screen and 
-       (max-width : 479px) and (min-width : 320px){
         #m-img{
           width: 100vw;
-          height: 100vh;
+          height: 450px;
           background-color: #161616;
-          padding-bottom: 5vh;
+          padding-bottom: 20px;
           
           .navi
           {
@@ -32,7 +30,7 @@
             position: fixed;
             z-index: 100;
             top: 0vh;
-            left:88vw;
+            left:84vw;
             // border: solid salmon;
             // transform: translate(-30%,-30%);
             &:hover{
@@ -44,7 +42,7 @@
             width:35px;
             position: absolute;
             top: 5vh;
-            left: 2vw;
+            left: 6vw;
             border-radius: 50px;
             background-color: white;
             transform: translate(-50%,-50%) rotate(0deg);
@@ -103,22 +101,25 @@
           display: flex;
           flex-direction: column;
           position: fixed;
-          left: 72vw;
-          width:25vw;
-          height: 270px;
+          left: 70vw;
+          top:0;
+          width:30vw;
+          height: 100vh;
           z-index: 90;
-          background-color: rgba(255,255,255 ,0.7);}
+          background-color:white;}
         
           ul {
             font-family: "PhosphateInline";
             display: flex;
             color: #161616;
-            font-size: 1rem;
-            margin-top: 2vh;
+            font-size: 1.3rem;
+            margin-top: 20vh;
             flex-direction: column;
            li a {
+             text-decoration: none;
+             color:#000;
             display: block;
-            padding: 15px 0;
+            padding: 20px 0;
             text-align: center;}
            } }
         
@@ -126,10 +127,9 @@
         
         .m-text
         {
-        
+         font-family: "PhosphateInline";
         // font-family: 'Share Tech Mono', monospace;
         font-size: 5rem;
-        font-weight: bold;
         padding-top: 10vh;
         text-align: center;
         color:#B4B1B1;
@@ -191,974 +191,182 @@
             animation-delay: 4.5s;
           }
         }
-      }
+      
 
   
-       @media only screen and 
-       (max-width : 568px) and (min-width : 480px){
+       @media only screen and (min-width : 480px) and (max-width: 543px){
+        
         #m-img{
-          width: 100vw;
-          height: 100vh;
-          background-color: #161616;
-          padding-bottom: 5vh;
-          
-          .navi
-          {
-          //  top: 0px;
-          padding: 0;
-          margin:0;
-          display: flex;
-          flex-direction: row;
-        
-          .myFace { width: auto;
-            &:hover{cursor: pointer;}}
-          
-          #logo{width: 20vw;}
-           
-          
-          
-           #menu{
-            width: 100px;
-            height: 80px;
-            position: fixed;
-            z-index: 100;
-            top: 0vh;
-            left:88vw;
-            // border: solid salmon;
-            // transform: translate(-30%,-30%);
-            &:hover{
-              cursor:pointer;
-            }
-          
-          .burger{
-            height: 2px;
-            width:35px;
-            position: absolute;
-            top: 5vh;
-            left: 2vw;
-            border-radius: 50px;
-            background-color: white;
-            transform: translate(-50%,-50%) rotate(0deg);
-            transition: all ease 0.5s;
-            animation-name: backgroundcolorchange;
-            animation-duration: 3s;
-            animation-iteration-count: infinite;
-        
-            @keyframes backgroundcolorchange{
-            
-              0% {background: #ffffff;} 
-              50% {background: #161616;}
-              100% {background: #ffffff;}}
-            &::before,&::after{
-              content:"";
-              position: absolute;
-              height: inherit;
-              border-radius: inherit;
-              background-color: inherit;
-              margin: auto;
-              width: 50%;
-              animation-name: backgroundcolorchange;
-              animation-duration: 3s;
-              animation-iteration-count: infinite;
-            }
-            &::before{
-              top: -13px;
-              left: 0;
-              transform-origin: left;
-            }
-            &::after{
-              bottom:-13px;
-              right: 0;
-              transform-origin: right;
+          height: 80vh;
+          .main-nav{
+
+            ul{
+              font-size: 1.7rem;
             }
           }
-          
-          .open{
-            transform:translate(-50%,-50%) rotate(120deg);
-            &::before{
-              top:0;
-              transform: translateX(100%) rotate(120deg);
-            }
-            &::after{
-              bottom:0;
-              transform: translateX(-100%) rotate(120deg);
-            }
-          } 
+
+          .m-text{
+            font-size: 5.7rem;
+            padding-top: 20vh;
           }
-          }
-        
-        
-        .main-nav{
-          display: none;
-          &.slideToggle {
-          display: flex;
-          flex-direction: column;
-          position: fixed;
-          left: 72vw;
-          width:25vw;
-          height: 270px;
-          z-index: 90;
-          background-color: rgba(255,255,255 ,0.7);}
-        
-          ul {
-            font-family: "PhosphateInline";
-            display: flex;
-            color: #161616;
-            font-size: 1rem;
-            margin-top: 2vh;
-            flex-direction: column;
-           li a {
-            display: block;
-            padding: 15px 0;
-            text-align: center;}
-           } }
-        
-        
-        
-        .m-text
-        {
-        
-        // font-family: 'Share Tech Mono', monospace;
-        font-size: 7rem;
-        font-weight: bold;
-        padding-top: 10vh;
-        text-align: center;
-        color:#B4B1B1;
-        //copy from css text shadow
-        letter-spacing: 2px;
-        
-         & > span {
-        animation: glow 5s ease-in-out infinite;
-         }
-        
+
         }
-        
-        @keyframes glow {
-            10%, 90% {
-              color: #FFF;
-              text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #B4B1B1, 0 0 30px #B4B1B1, 0 0 40px #B4B1B1, 0 0 55px #B4B1B1, 0 0 75px #B4B1B1, 2px 2px 2px rgba(142,139,116,0), 2px 2px 2px;
-            }
-            
-            0%, 100% {
-              color: #111;
-              text-shadow: none;
-            }
-          }
-        
-          
-          .m-text > span:nth-child(2) {
-              animation-delay: 0.5s;
-          }
-          
-          .m-text > span:nth-child(3) {
-              animation-delay: 1s;
-          }
-          
-          .m-text > span:nth-child(4) {
-              animation-delay: 1.5s;
-          }
-          
-          .m-text > span:nth-child(5) {
-              animation-delay: 2s;
-          }
-          
-          .m-text > span:nth-child(7) {
-              animation-delay: 2.5s;
-          }
-          
-          .m-text > span:nth-child(8) {
-              animation-delay: 3s;
-          }
-        
-          .m-text > span:nth-child(9){
-            animation-delay: 3.5s;
-          }
-        
-          .m-text > span:nth-child(10){
-            animation-delay: 4s;
-          }
-        
-          .m-text > span:nth-child(11){
-            animation-delay: 4.5s;
-          }
-        }
+
+
       }
     
       @media only screen and 
-      (max-width : 767px) and (min-width :569px){
+      (min-width : 543px) and  (max-width : 720px) {
+
         #m-img{
-          width: 100vw;
           height: 100vh;
-          background-color: #161616;
-          padding-bottom: 5vh;
+
           
-          .navi
-          {
-          //  top: 0px;
-          padding: 0;
-          margin:0;
-          display: flex;
-          flex-direction: row;
-        
-          .myFace { width: auto;
-            &:hover{cursor: pointer;}}
+
+            .navi{
+              #menu{left:88vw;}
+            }
           
-          #logo{width: 17vw;}
+
+          .main-nav{
+            ul{
+              font-size: 2rem;
+            }
+          }
+
+          .m-text{
+            font-size:7.5rem;
            
-          
-          
-           #menu{
-            width: 100px;
-            height: 80px;
-            position: fixed;
-            z-index: 100;
-            top: 0vh;
-            left:90vw;
-            // border: solid salmon;
-            // transform: translate(-30%,-30%);
-            &:hover{
-              cursor:pointer;
-            }
-          
-          .burger{
-            height: 4px;
-            width:55px;
-            position: absolute;
-            top: 5vh;
-            left: 0vw;
-            border-radius: 50px;
-            background-color: white;
-            transform: translate(-50%,-50%) rotate(0deg);
-            transition: all ease 0.5s;
-            animation-name: backgroundcolorchange;
-            animation-duration: 3s;
-            animation-iteration-count: infinite;
-        
-            @keyframes backgroundcolorchange{
-            
-              0% {background: #ffffff;} 
-              50% {background: #161616;}
-              100% {background: #ffffff;}}
-            &::before,&::after{
-              content:"";
-              position: absolute;
-              height: inherit;
-              border-radius: inherit;
-              background-color: inherit;
-              margin: auto;
-              width: 50%;
-              animation-name: backgroundcolorchange;
-              animation-duration: 3s;
-              animation-iteration-count: infinite;
-            }
-            &::before{
-              top: -13px;
-              left: 0;
-              transform-origin: left;
-            }
-            &::after{
-              bottom:-13px;
-              right: 0;
-              transform-origin: right;
-            }
+            padding-top: 23vh;
           }
-          
-          .open{
-            transform:translate(-50%,-50%) rotate(120deg);
-            &::before{
-              top:0;
-              transform: translateX(100%) rotate(120deg);
-            }
-            &::after{
-              bottom:0;
-              transform: translateX(-100%) rotate(120deg);
-            }
-          } 
-          }
-          }
-        
-        
-        .main-nav{
-          display: none;
-          &.slideToggle {
-          display: flex;
-          flex-direction: column;
-          position: fixed;
-          left: 74vw;
-          width:20vw;
-          height: 50vh;
-          z-index: 200;
-          background-color: rgba(255,255,255 ,0.7);}
-        
-          ul {
-            font-family: "PhosphateInline";
-            display: flex;
-            color: #161616;
-            font-size: 1.5rem;
-            margin-top: 2vh;
-            flex-direction: column;
-           li a {
-            display: block;
-            padding: 15px 0;
-            text-align: center;}
-           } }
-        
-        
-        
-        .m-text
-        {
-        font-weight: bold;
-        font-size: 10rem;
-        padding-top: 20vh;
-        text-align: center;
-        color:#B4B1B1;
-        //copy from css text shadow
-        letter-spacing: 3px;
-        
-         & > span {
-        animation: glow 5s ease-in-out infinite;
-         }
-        
+
         }
+
         
-        @keyframes glow {
-            10%, 90% {
-              color: #FFF;
-              text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #B4B1B1, 0 0 30px #B4B1B1, 0 0 40px #B4B1B1, 0 0 55px #B4B1B1, 0 0 75px #B4B1B1, 2px 2px 2px rgba(142,139,116,0), 2px 2px 2px;
-            }
-            
-            0%, 100% {
-              color: #111;
-              text-shadow: none;
-            }
-          }
-        
-          
-          .m-text > span:nth-child(2) {
-              animation-delay: 0.5s;
-          }
-          
-          .m-text > span:nth-child(3) {
-              animation-delay: 1s;
-          }
-          
-          .m-text > span:nth-child(4) {
-              animation-delay: 1.5s;
-          }
-          
-          .m-text > span:nth-child(5) {
-              animation-delay: 2s;
-          }
-          
-          .m-text > span:nth-child(7) {
-              animation-delay: 2.5s;
-          }
-          
-          .m-text > span:nth-child(8) {
-              animation-delay: 3s;
-          }
-        
-          .m-text > span:nth-child(9){
-            animation-delay: 3.5s;
-          }
-        
-          .m-text > span:nth-child(10){
-            animation-delay: 4s;
-          }
-        
-          .m-text > span:nth-child(11){
-            animation-delay: 4.5s;
-          }
-        }
       }
-    
 
 
 
         //tablette omelette
-       @media only screen and 
-       (max-width : 1023px) and (min-width : 768px){
+        @media only screen and 
+        (min-width : 721px) and  (max-width : 1023px) {
 
-
-        #m-img{
-          width: 100vw;
-          height: 100vh;
-          background-color: #161616;
-          padding-bottom: 5vh;
-          
-          .navi
-          {
-          //  top: 0px;
-          padding: 0;
-          margin:0;
-          display: flex;
-          flex-direction: row;
-        
-          .myFace { width: auto;
-            &:hover{cursor: pointer;}}
-          
-          #logo{width: 12vw;}
-           
-          
-          
-           #menu{
-            width: 100px;
-            height: 80px;
-            position: fixed;
-            z-index: 100;
-            top: 0vh;
-            left:90vw;
-            // border: solid salmon;
-            // transform: translate(-30%,-30%);
-            &:hover{
-              cursor:pointer;
-            }
-          
-          .burger{
-            height: 4px;
-            width:55px;
-            position: absolute;
-            top: 5vh;
-            left: 4vw;
-            border-radius: 50px;
-            background-color: white;
-            transform: translate(-50%,-50%) rotate(0deg);
-            transition: all ease 0.5s;
-            animation-name: backgroundcolorchange;
-            animation-duration: 3s;
-            animation-iteration-count: infinite;
-        
-            @keyframes backgroundcolorchange{
+          #m-img{
+            height: 130vh;
+  
             
-              0% {background: #ffffff;} 
-              50% {background: #161616;}
-              100% {background: #ffffff;}}
-            &::before,&::after{
-              content:"";
-              position: absolute;
-              height: inherit;
-              border-radius: inherit;
-              background-color: inherit;
-              margin: auto;
-              width: 50%;
-              animation-name: backgroundcolorchange;
-              animation-duration: 3s;
-              animation-iteration-count: infinite;
+  
+              .navi{
+                #menu{left:88vw;
+                
+                .burger{
+
+                  width: 40px;
+                  height:4px;
+                }}
+              }
+            
+  
+            .main-nav{
+              ul{
+                font-size: 2.5rem;
+              }
             }
-            &::before{
-              top: -13px;
-              left: 0;
-              transform-origin: left;
+  
+            .m-text{
+              font-size:10rem;
+             
+              padding-top: 30vh;
             }
-            &::after{
-              bottom:-13px;
-              right: 0;
-              transform-origin: right;
-            }
+  
           }
-          
-          .open{
-            transform:translate(-50%,-50%) rotate(120deg);
-            &::before{
-              top:0;
-              transform: translateX(100%) rotate(120deg);
-            }
-            &::after{
-              bottom:0;
-              transform: translateX(-100%) rotate(120deg);
-            }
-          } 
-          }
-          }
-        
-        
-        .main-nav{
-          display: none;
-          &.slideToggle {
-          display: flex;
-          flex-direction: column;
-          position: fixed;
-          left: 74vw;
-          width:20vw;
-          height: 50vh;
-          z-index: 90;
-          background-color: rgba(255,255,255 ,0.7);}
-        
-          ul {
-            font-family: "PhosphateInline";
-            display: flex;
-            color: #161616;
-            font-size: 1.7rem;
-            margin-top: 2vh;
-            flex-direction: column;
-           li a {
-            display: block;
-            padding: 15px 0;
-            text-align: center;}
-           } }
-        
-        
-        
-        .m-text
-        {
-        
-        font-family:"PhosphateInline";
-        font-size: 14em;
-        padding-top: 20vh;
-        text-align: center;
-        color:#B4B1B1;
-        //copy from css text shadow
-        letter-spacing: 3px;
-        
-         & > span {
-        animation: glow 5s ease-in-out infinite;
-         }
-        
+
         }
-        
-        @keyframes glow {
-            10%, 90% {
-              color: #FFF;
-              text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #B4B1B1, 0 0 30px #B4B1B1, 0 0 40px #B4B1B1, 0 0 55px #B4B1B1, 0 0 75px #B4B1B1, 2px 2px 2px rgba(142,139,116,0), 2px 2px 2px;
-            }
+
+
+
+
+
+
+
+    
+
+        @media only screen and
+        (min-width: 1024px) and (max-width: 1281px){
+
+          #m-img{
+            height: 160vh;
+  
+              .navi{
+                #menu{left:89vw;
+              
+                .burger{
+
+                  width: 42px;
+                  height:4px;
+                }
+              }
+            }//navi
             
-            0%, 100% {
-              color: #111;
-              text-shadow: none;
+  
+            .main-nav{
+            
+              width: 15vw;
+              left: 70vw;
+              
+              ul{
+                font-size: 2.7rem;
+              }
+            
+          }
+  
+            .m-text{
+              font-size:14rem;
+             
+              padding-top: 40vh;
             }
+  
           }
-        
-          
-          .m-text > span:nth-child(2) {
-              animation-delay: 0.5s;
-          }
-          
-          .m-text > span:nth-child(3) {
-              animation-delay: 1s;
-          }
-          
-          .m-text > span:nth-child(4) {
-              animation-delay: 1.5s;
-          }
-          
-          .m-text > span:nth-child(5) {
-              animation-delay: 2s;
-          }
-          
-          .m-text > span:nth-child(7) {
-              animation-delay: 2.5s;
-          }
-          
-          .m-text > span:nth-child(8) {
-              animation-delay: 3s;
-          }
-        
-          .m-text > span:nth-child(9){
-            animation-delay: 3.5s;
-          }
-        
-          .m-text > span:nth-child(10){
-            animation-delay: 4s;
-          }
-        
-          .m-text > span:nth-child(11){
-            animation-delay: 4.5s;
-          }
+
+
+        }
+
+   //Big desktop
+@media only screen and (min-width: 1282px){
+
+
+  #m-img{
+    height: 160vh;
+
+      .navi{
+        #menu{left:89vw;
+      
+        .burger{
+
+          width: 42px;
+          height:4px;
         }
       }
-
-
-
-
-
-
-
-
-
-
+    }//navi
     
 
-       @media only screen and
-       (max-width: 1279px) and (min-width: 1024px){
+    .main-nav{
+    
+      width: 15vw;
+      left: 70vw;
+      
+      ul{
+        font-size: 2.7rem;
+      }
+    
+  }
 
-        #m-img{
-          width: 100vw;
-          height: 100vh;
-          background-color: #161616;
-          padding-bottom: 5vh;
-          
-          .navi
-          {
-          //  top: 0px;
-          padding: 0;
-          margin:0;
-          display: flex;
-          flex-direction: row;
-        
-          .myFace { width: auto;
-            &:hover{cursor: pointer;}}
-          
-          #logo{width: 12vw;}
-           
-          
-          
-           #menu{
-            width: 100px;
-            height: 80px;
-            position: fixed;
-            z-index: 1;
-            top: 0vh;
-            left:90vw;
-            // border: solid salmon;
-            // transform: translate(-30%,-30%);
-            &:hover{
-              cursor:pointer;
-            }
-          
-          .burger{
-            height: 4px;
-            width:55px;
-            position: absolute;
-            top: 5vh;
-            left: 4vw;
-            border-radius: 50px;
-            background-color: white;
-            transform: translate(-50%,-50%) rotate(0deg);
-            transition: all ease 0.5s;
-            animation-name: backgroundcolorchange;
-            animation-duration: 3s;
-            animation-iteration-count: infinite;
-        
-            @keyframes backgroundcolorchange{
-            
-              0% {background: #ffffff;} 
-              50% {background: #161616;}
-              100% {background: #ffffff;}}
-            &::before,&::after{
-              content:"";
-              position: absolute;
-              height: inherit;
-              border-radius: inherit;
-              background-color: inherit;
-              margin: auto;
-              width: 50%;
-              animation-name: backgroundcolorchange;
-              animation-duration: 3s;
-              animation-iteration-count: infinite;
-            }
-            &::before{
-              top: -13px;
-              left: 0;
-              transform-origin: left;
-            }
-            &::after{
-              bottom:-13px;
-              right: 0;
-              transform-origin: right;
-            }
-          }
-          
-          .open{
-            transform:translate(-50%,-50%) rotate(120deg);
-            &::before{
-              top:0;
-              transform: translateX(100%) rotate(120deg);
-            }
-            &::after{
-              bottom:0;
-              transform: translateX(-100%) rotate(120deg);
-            }
-          } 
-          }
-          }
-        
-        
-        .main-nav{
-          display: none;
-          &.slideToggle {
-          display: flex;
-          flex-direction: column;
-          position: fixed;
-          left: 74vw;
-          width:20vw;
-          height: 50vh;
-          z-index: 99;
-          background-color: rgba(255,255,255 ,0.7);}
-        
-          ul {
-            font-family: "PhosphateInline";
-            display: flex;
-            color: #161616;
-            font-size: 1.7rem;
-            margin-top: 2vh;
-            flex-direction: column;
-           li a {
-            display: block;
-            padding: 15px 0;
-            text-align: center;}
-           } }
-        
-        
-        
-        .m-text
-        {
-        
-        font-family:"PhosphateInline";
-        font-size: 14em;
-        padding-top: 20vh;
-        text-align: center;
-        color:#B4B1B1;
-        //copy from css text shadow
-        letter-spacing: 3px;
-        
-         & > span {
-        animation: glow 5s ease-in-out infinite;
-         }
-        
-        }
-        
-        @keyframes glow {
-            10%, 90% {
-              color: #FFF;
-              text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #B4B1B1, 0 0 30px #B4B1B1, 0 0 40px #B4B1B1, 0 0 55px #B4B1B1, 0 0 75px #B4B1B1, 2px 2px 2px rgba(142,139,116,0), 2px 2px 2px;
-            }
-            
-            0%, 100% {
-              color: #111;
-              text-shadow: none;
-            }
-          }
-        
-          
-          .m-text > span:nth-child(2) {
-              animation-delay: 0.5s;
-          }
-          
-          .m-text > span:nth-child(3) {
-              animation-delay: 1s;
-          }
-          
-          .m-text > span:nth-child(4) {
-              animation-delay: 1.5s;
-          }
-          
-          .m-text > span:nth-child(5) {
-              animation-delay: 2s;
-          }
-          
-          .m-text > span:nth-child(7) {
-              animation-delay: 2.5s;
-          }
-          
-          .m-text > span:nth-child(8) {
-              animation-delay: 3s;
-          }
-        
-          .m-text > span:nth-child(9){
-            animation-delay: 3.5s;
-          }
-        
-          .m-text > span:nth-child(10){
-            animation-delay: 4s;
-          }
-        
-          .m-text > span:nth-child(11){
-            animation-delay: 4.5s;
-          }
-        }
+    .m-text{
+      font-size:14rem;
+     
+      padding-top: 40vh;
+    }
 
-       }
-
-
-      //big screen.................................................
-       @media only screen and 
-       (min-width: 1280px){
-       
-
-#m-img{
-  width: 100vw;
-  height: 100vh;
-  background-color: #161616;
-  padding-bottom: 5vh;
-  
-  .navi
-  {
-  //  top: 0px;
-  padding: 0;
-  margin:0;
-  display: flex;
-  flex-direction: row;
-
-  .myFace { width: auto;
-    &:hover{cursor: pointer;}}
-  
-  #logo{width: 12vw;}
+  }
+}
    
-  
-  
-   #menu{
-    width: 100px;
-    height: 80px;
-    position: fixed;
-    z-index: 1;
-    top: 0vh;
-    left:90vw;
-    // border: solid salmon;
-    // transform: translate(-30%,-30%);
-    &:hover{
-      cursor:pointer;
-    }
-  
-  .burger{
-    height: 4px;
-    width:55px;
-    position: absolute;
-    top: 5vh;
-    left: 4vw;
-    border-radius: 50px;
-    background-color: white;
-    transform: translate(-50%,-50%) rotate(0deg);
-    transition: all ease 0.5s;
-    animation-name: backgroundcolorchange;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-
-    @keyframes backgroundcolorchange{
-    
-      0% {background: #ffffff;} 
-      50% {background: #161616;}
-      100% {background: #ffffff;}}
-    &::before,&::after{
-      content:"";
-      position: absolute;
-      height: inherit;
-      border-radius: inherit;
-      background-color: inherit;
-      margin: auto;
-      width: 50%;
-      animation-name: backgroundcolorchange;
-      animation-duration: 3s;
-      animation-iteration-count: infinite;
-    }
-    &::before{
-      top: -13px;
-      left: 0;
-      transform-origin: left;
-    }
-    &::after{
-      bottom:-13px;
-      right: 0;
-      transform-origin: right;
-    }
-  }
-  
-  .open{
-    transform:translate(-50%,-50%) rotate(120deg);
-    &::before{
-      top:0;
-      transform: translateX(100%) rotate(120deg);
-    }
-    &::after{
-      bottom:0;
-      transform: translateX(-100%) rotate(120deg);
-    }
-  } 
-  }
-  }
-
-
-.main-nav{
-  display: none;
-  &.slideToggle {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  left: 74vw;
-  width:20vw;
-  height: 50vh;
-  z-index: 99;
-  background-color: rgba(255,255,255 ,0.7);}
-
-  ul {
-    font-family: "PhosphateInline";
-    display: flex;
-    color: #161616;
-    font-size: 1.7rem;
-    margin-top: 2vh;
-    flex-direction: column;
-   li a {
-    display: block;
-    padding: 15px 0;
-    text-align: center;}
-   } }
-
-
-
-.m-text
-{
-
-font-family:"PhosphateInline";
-font-size: 15em;
-padding-top: 20vh;
-text-align: center;
-color:#B4B1B1;
-//copy from css text shadow
-letter-spacing: 3px;
-
- & > span {
-animation: glow 5s ease-in-out infinite;
- }
-
-}
-
-@keyframes glow {
-    10%, 90% {
-      color: #FFF;
-      text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #B4B1B1, 0 0 30px #B4B1B1, 0 0 40px #B4B1B1, 0 0 55px #B4B1B1, 0 0 75px #B4B1B1, 2px 2px 2px rgba(142,139,116,0), 2px 2px 2px;
-    }
-    
-    0%, 100% {
-      color: #111;
-      text-shadow: none;
-    }
-  }
-
-  
-  .m-text > span:nth-child(2) {
-      animation-delay: 0.5s;
-  }
-  
-  .m-text > span:nth-child(3) {
-      animation-delay: 1s;
-  }
-  
-  .m-text > span:nth-child(4) {
-      animation-delay: 1.5s;
-  }
-  
-  .m-text > span:nth-child(5) {
-      animation-delay: 2s;
-  }
-  
-  .m-text > span:nth-child(7) {
-      animation-delay: 2.5s;
-  }
-  
-  .m-text > span:nth-child(8) {
-      animation-delay: 3s;
-  }
-
-  .m-text > span:nth-child(9){
-    animation-delay: 3.5s;
-  }
-
-  .m-text > span:nth-child(10){
-    animation-delay: 4s;
-  }
-
-  .m-text > span:nth-child(11){
-    animation-delay: 4.5s;
-  }
-}
-
-}
