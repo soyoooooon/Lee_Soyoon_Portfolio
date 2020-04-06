@@ -59,7 +59,7 @@ router.post('/send', (req,res) => {
       service: 'gmail',
       auth: {
           user: 'soyoon.ca@gmail.com',
-          pass: 'thisisforU'
+          pass: 'London-Front-End-Lee0116'
       }
   });
 
