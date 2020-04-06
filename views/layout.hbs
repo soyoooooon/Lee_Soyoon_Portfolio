@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" type="image/ico" href="images/logo.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    
     <title>Lee, Soyoon</title>
 </head>
 <body>
@@ -21,41 +24,52 @@
       <li><a href="#m-img">HOME</a></li>
       <li><a href="#about">ABOUT</a></li>
       <li><a href="#work">WORK</a></li>
-      <li><a href="#video">VIDEO</a></li>
       <li><a href="#form" class="nav-cont">CONTACT</a></li>
     </ul>
   </nav>
   
   <h1 class="m-text">
   <span>H</span><span>E</span><span>L</span><span>L</span><span>O</span><br>
-  <span>W</span><span>O</span><span>R</span><span>L</span><span>D</span></h1>
+  <span>I'M</span> <span>Y</span><span>O</span><span>O</span><span>N</span></h1>
 </section>
 <!-- hook image-->
 <section id="about">
 <div class="black-about">
-<h2>ABOUT</h2>
+{{!-- <h2>ABOUT</h2> --}}
 <div class="img-con"></div>
-<marquee direction="up" scrollamount="11" loop="infinite">SOYOON LEE: FRONT-END DEVELOPER
-  <br>SOYOON LEE: FRONT-END DEVELOPER<br>SOYOON LEE: FRONT-END DEVELOPER
-  <br>SOYOON LEE: FRONT-END DEVELOPER<br>SOYOON LEE: FRONT-END DEVELOPER
-  <br>SOYOON LEE: FRONT-END DEVELOPER<br>SOYOON LEE: FRONT-END DEVELOPER<br>
-  SOYOON LEE: FRONT-END DEVELOPER<br>SOYOON LEE: FRONT-END DEVELOPER</marquee>
-  <!---LOL--->
 </div>
-<div id="about-dynamic">
-<h1><span>H</span>ELLO I'M SOYOON</h1>
+<div id="intro-cont">
+  <h2 id="intro"><span>I AM YOON</span></h2>
+  {{!-- <h3>I am a junior FRONT-END DEVELOPER</h3> --}}
+  <p id="onEp">Based in Ontario, Canada. But I'm always willing to travel and work everywhere.
+  hailed from Seoul, South Korea. Now I am in Canada, always be open-minded about diverse cultures.
+  </p>
+  <p id="twOp">I love what I'm doing, my work. I have a passion for learning more about web development.</p>
+
+  <button class="resume"><a href="images/resume_copy.pdf" download>Resumé</a></button>
+</div>
+<div class="skill-set">
+<h3>I have a confidence in these skills : </h3>
+<img src="images/html.svg">
+<img src="images/sass.png">
+<img src="images/js-icon.png">
+<img src="images/Vue-js.svg">
+<img src="images/node.png">
+</div>
+</section>
+
+
+
+
+
+{{!-- <h1><span>H</span>ELLO I'M SOYOON</h1> --}}
 {{{ body }}}
 
   <!-- work -->
  
 
- <section id="video">
  
-   <video autoplay loop controls muted src="images/Lee_Soyoon_DemoReel-web.mp4" type="video/mp4">
- </video>
- </section>
-
-{{!-- <section id="contact"> --}}
+<section id="contact">
  <div id="form">
                 <h2>LET'S GET IN TOUCH...</h2>
                 <form id="plz" action="/send" method="POST">
@@ -69,13 +83,13 @@
  <div class="sendit">
  <h2>Thank you for contact!</h2>
  <h3>I'll respond to your contact as quickly as possible.:)</h3>
- </div>
+ </div></section>
 
 <footer id="foot">
   <ul class="icons">
-    <li><a href="https://www.linkedin.com/in/soyoon-lee-75ab66199/"><img src="images/linkedin.svg"></a></li>
-    <li><a href="https://github.com/soyoooooon"><img src="images/github-footer.svg"></a></li>
-    <li><a href="https://www.facebook.com/soyoon.lee.94043"><img src="images/facebook.svg"></a></li>
+    <li><a href="https://www.linkedin.com/in/soyoon-lee-75ab66199/" target="_blank"><img src="images/linkedin.svg"></a></li>
+    <li><a href="https://github.com/soyoooooon" target="_blank"><img src="images/github-footer.svg"></a></li>
+    <li><a href="https://www.facebook.com/soyoon.lee.94043" target="_blank"><img src="images/facebook.svg"></a></li>
   </div>
 </footer>
 </main>

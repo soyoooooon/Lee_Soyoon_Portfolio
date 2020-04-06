@@ -1,7 +1,8 @@
 (()=> {
-console.log('Trevor..');
+console.log('you can do it..');
 
 let myData = document.querySelectorAll('.workData');
+let otherData = document.querySelectorAll('.etc-work');
 let lightBox = document.querySelector('.popover');
 let closeBtn = document.querySelector('.close-btn');
 let myImages = document.querySelector('.img-cont');
@@ -10,12 +11,14 @@ let clickBox = document.querySelector('#menu');
 let burger = document.querySelector('.burger');
 let conTact = document.querySelector('#form');
 let contBtn = document.querySelector('.nav-cont');
+let contBtn2 = document.querySelector('.contact-btn');
 let myFace = document.querySelector('.myFace');
 let submitBtn = document.querySelector('.submit-btn');
 let submitSend = document.querySelector('.sendit');
 
 function imgChange(){
     let offset = 450,
+    //used to 450px
     multiplier = this.dataset.offset; 
     myImages.style.right = `${offset * multiplier + "px"}`;
 
@@ -23,15 +26,59 @@ function imgChange(){
 
 }
 
+let waypoint = new Waypoint({
+  element: document.getElementById('intro'),
+  handler: function() {
+    console.log('Scrolled to waypoint!')
+
+
+    intro.classList.add('intro-hi')
+
+   
+    // this.element.innerHTML = "<h3>I am a junior FRONT-END DEVELOPER</h3>";
+  },offset: '650'
+  
+  
+})
+
+
+let waypoint2 = new Waypoint({
+  element: document.getElementById('onEp'),
+  handler: function() {
+    console.log('Scrolled to waypoint!')
+
+
+    onEp.classList.add('p-open1')
+
+   
+    // this.element.innerHTML = "<h3>I am a junior FRONT-END DEVELOPER</h3>";
+  },offset: '590'
+  
+})
+
+let waypoint3 = new Waypoint({
+  element: document.getElementById('twOp'),
+  handler: function() {
+    console.log('Scrolled to waypoint!')
+
+
+    twOp.classList.add('p-open2')
+
+   
+    // this.element.innerHTML = "<h3>I am a junior FRONT-END DEVELOPER</h3>";
+  },offset: '570'
+  
+})
 
 function showLight(data, el) {
 
    lightBox.querySelector(".name").textContent = `${data.name}`;
    lightBox.querySelector(".tool").textContent = `${data.tool}`;
    lightBox.querySelector(".team").textContent = `${data.team}`;
-   lightBox.querySelector(".text").textContent = data.text;
+   lightBox.querySelector(".text").textContent = `${data.text}`;
+   lightBox.querySelector(".text-2").innerHTML =`${data.textEtc}`;
    lightBox.querySelector(".workImg").innerHTML = `<img src = "images/${data.image}">`;
-   lightBox.querySelector(".link").innerHTML = `<a href = "${data.link}"><img src="images/github.svg"></a>`
+   lightBox.querySelector(".link").innerHTML = `<a href = "${data.link}" target="_blank"><img src="images/github.svg"></a>`
    
 
     lightBox.classList.add('show-popover');
@@ -104,15 +151,29 @@ function clickSubmit(){
     submitSend.classList.toggle('sendPage');
 
   
-}
+};
+
+document.addEventListener('keydown', function(event) {
+  const key = event.key; 
+
+ 
+  if (key === "Escape") {
+    lightBox.classList.remove('show-popover');
+    burger.classList.remove('open');
+    menuCont.classList.remove('slideToggle');
+    conTact.classList.remove('show-cont');
+  }
+    });
 
 
 
 myData.forEach(button => button.addEventListener("click", imgChange));
 myData.forEach(button => button.addEventListener("click", fetchData));
+otherData.forEach(button => button.addEventListener("click",fetchData));
 closeBtn.addEventListener("click", closePop);
 clickBox.addEventListener("click",clickMenu);
 contBtn.addEventListener("click", intoContact);
+contBtn2.addEventListener("click", intoContact);
 myFace.addEventListener("click", heLLo);
 submitBtn.addEventListener("click",clickSubmit);
 })();
